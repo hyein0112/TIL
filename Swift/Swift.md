@@ -46,4 +46,6 @@ Objective-C, Ruby, Python, C#, Rust, Haskell, CLU 등 기존의 언어와 신생
 
 - Xcode는 macOS에서 동작하는 애플의 통합개발환경이다.
 - Xcode는 맥 앱스토어에서 무료로 내려받아 설치할 수 있다.
-- Xcode로는 맥용 애플리케이션 제작부터 iOS, watchOS, tvOS 등의 애플리케이션 제작, 프레임워크 및 라이브러리 제작 등등 다양한 프로그래밍을 할 수 있다.
+- Xcode로는 맥용 애플리케이션 제작부터 iOS, watchOS, tvOS 등의 애플리케이션 제작, 프레임워크 및 라이브러리 제작 등등 다양한 프로그래밍을 할 수 있다.   
+
+###### *Click [참고](https://blog.yagom.net/526/)* 
