@@ -70,6 +70,7 @@ git checkout master //master branch로 이동
 git branch -d <branch>
 ```
 
+[Reference](https://velog.io/@delilah/GitHub-Git-%EB%AA%85%EB%A0%B9%EC%96%B4-%EB%AA%A8%EC%9D%8C)
 
 
 
