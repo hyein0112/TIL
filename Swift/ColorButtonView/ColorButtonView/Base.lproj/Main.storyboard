@@ -16,8 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peo-2p-OXJ">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peo-2p-OXJ">
                                 <rect key="frame" x="316" y="344" width="38" height="218"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Black">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -25,8 +26,9 @@
                                     <action selector="black:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NrF-gB-bjg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciZ-aE-njj">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciZ-aE-njj">
                                 <rect key="frame" x="227" y="344" width="44" height="218"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Yellow">
                                     <color key="titleColor" systemColor="systemYellowColor"/>
                                 </state>
@@ -34,8 +36,9 @@
                                     <action selector="yellow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NKQ-nG-MOT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHb-6q-a3E">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHb-6q-a3E">
                                 <rect key="frame" x="151" y="344" width="31" height="218"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Blue">
                                     <color key="titleColor" systemColor="systemBlueColor"/>
                                 </state>
@@ -43,8 +46,9 @@
                                     <action selector="blue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TIO-bd-851"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cw-xC-dPo">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cw-xC-dPo">
                                 <rect key="frame" x="60" y="344" width="30" height="218"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Red">
                                     <color key="titleColor" systemColor="systemRedColor"/>
                                 </state>
@@ -55,27 +59,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="ciZ-aE-njj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="5YS-wF-fgu"/>
-                            <constraint firstItem="GHb-6q-a3E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="6k9-DB-ZoQ"/>
-                            <constraint firstItem="9cw-xC-dPo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="ACD-Bi-TzA"/>
-                            <constraint firstItem="peo-2p-OXJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="C4h-6w-ugx"/>
-                            <constraint firstItem="GHb-6q-a3E" firstAttribute="centerY" secondItem="9cw-xC-dPo" secondAttribute="centerY" id="Gwu-2g-9I8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9cw-xC-dPo" secondAttribute="bottom" constant="300" id="Nhk-PB-Rxo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="peo-2p-OXJ" secondAttribute="trailing" constant="60" id="PSE-n2-HCb"/>
-                            <constraint firstItem="9cw-xC-dPo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="TkF-fp-n0M"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ciZ-aE-njj" secondAttribute="bottom" constant="300" id="VbW-Rc-cAu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="peo-2p-OXJ" secondAttribute="trailing" constant="60" id="Ve5-5C-gr5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GHb-6q-a3E" secondAttribute="bottom" constant="300" id="Y7w-kX-2xq"/>
-                            <constraint firstItem="GHb-6q-a3E" firstAttribute="leading" secondItem="9cw-xC-dPo" secondAttribute="trailing" constant="45" id="g4O-QY-8Wp"/>
-                            <constraint firstItem="ciZ-aE-njj" firstAttribute="centerY" secondItem="9cw-xC-dPo" secondAttribute="centerY" id="gnG-0d-Pwp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="peo-2p-OXJ" secondAttribute="bottom" constant="300" id="lE9-gs-C0d"/>
-                            <constraint firstItem="peo-2p-OXJ" firstAttribute="leading" secondItem="ciZ-aE-njj" secondAttribute="trailing" constant="45" id="qsH-ip-UQx"/>
-                            <constraint firstItem="peo-2p-OXJ" firstAttribute="leading" secondItem="ciZ-aE-njj" secondAttribute="trailing" constant="45" id="rS8-FC-NIB"/>
-                            <constraint firstItem="peo-2p-OXJ" firstAttribute="centerY" secondItem="9cw-xC-dPo" secondAttribute="centerY" id="tTC-vK-INO"/>
-                            <constraint firstItem="9cw-xC-dPo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="tXa-YU-MCk"/>
-                            <constraint firstItem="ciZ-aE-njj" firstAttribute="leading" secondItem="GHb-6q-a3E" secondAttribute="trailing" constant="45" id="z6z-e8-Rv5"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
