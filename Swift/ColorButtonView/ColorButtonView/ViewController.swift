@@ -15,133 +15,56 @@ class ViewController: UIViewController {
     }
     
     
-    var redFlag = false, blueFlag = false, yellowFlag = false, blackFlag = false
-    
-    
-
+    // red 버튼 설정
     @IBAction func red(_ sender: UIButton) {
         
+        // 배경색이 red가 아닐 때 red로 바꿈
         if view.backgroundColor != UIColor.red {
-            
-            
-            if redFlag == false {
                 view.backgroundColor = UIColor.red
-                redFlag = true
-            }
-            
-            else if redFlag == true {
-                view.backgroundColor = UIColor.red
-                redFlag = false
-            }
-            
         }
-        
+           
+        // 배경색이 red일 때 white로 바꿈
         else if view.backgroundColor == UIColor.red {
-            
-            if redFlag == false{
                 view.backgroundColor = UIColor.white
-                redFlag = true
             }
-            
-            else if redFlag == true {
-                view.backgroundColor = UIColor.white
-                redFlag = false
-            }
-            
         }
-    }
     
     
+    // blue 버튼 설정
     @IBAction func blue(_ sender: UIButton) {
+    
         if view.backgroundColor != UIColor.blue {
-            
-            
-            if blueFlag == false {
-                view.backgroundColor = UIColor.blue
-                blueFlag = true
-            }
-            
-            else if blueFlag == true {
-                view.backgroundColor = UIColor.blue
-                blueFlag = false
-            }
-            
+            view.backgroundColor = UIColor.blue
         }
-        
+    
         else if view.backgroundColor == UIColor.blue {
-            
-            if blueFlag == false{
                 view.backgroundColor = UIColor.white
-                blueFlag = true
-            }
-            
-            else if blueFlag == true {
-                view.backgroundColor = UIColor.white
-                blueFlag = false
-            }
-            
         }
     }
     
+    
+    // yellow 버튼 설정
     @IBAction func yellow(_ sender: UIButton) {
+        
         if view.backgroundColor != UIColor.yellow {
-            
-            
-            if yellowFlag == false {
                 view.backgroundColor = UIColor.yellow
-                yellowFlag = true
-            }
-            
-            else if yellowFlag == true {
-                view.backgroundColor = UIColor.yellow
-                yellowFlag = false
-            }
-            
         }
         
         else if view.backgroundColor == UIColor.yellow {
-            
-            if yellowFlag == false{
                 view.backgroundColor = UIColor.white
-                yellowFlag = true
-            }
-            
-            else if yellowFlag == true {
-                view.backgroundColor = UIColor.white
-                yellowFlag = false
-            }
-            
         }
     }
     
+    
+    // black 버튼 설정
     @IBAction func black(_ sender: UIButton) {
+        
         if view.backgroundColor != UIColor.black {
-            
-            
-            if blackFlag == false {
                 view.backgroundColor = UIColor.black
-                blackFlag = true
-            }
-            
-            else if blackFlag == true {
-                view.backgroundColor = UIColor.black
-                blackFlag = false
-            }
-            
         }
         
         else if view.backgroundColor == UIColor.black {
-            
-            if blackFlag == false{
                 view.backgroundColor = UIColor.white
-                blackFlag = true
-            }
-            
-            else if blackFlag == true {
-                view.backgroundColor = UIColor.white
-                blackFlag = false
-            }
-            
         }
     }
 
