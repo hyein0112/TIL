@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B8E27C6D268376600008E21F /* AutoLaout_constraint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLaout_constraint.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8E27C6D268376600008E21F /* AutoLayout_constraint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayout_constraint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8E27C70268376600008E21F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8E27C72268376600008E21F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B8E27C74268376600008E21F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		B8E27C6E268376600008E21F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B8E27C6D268376600008E21F /* AutoLaout_constraint.app */,
+				B8E27C6D268376600008E21F /* AutoLayout_constraint.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,22 +57,23 @@
 			isa = PBXGroup;
 			children = (
 				B8E27C70268376600008E21F /* AppDelegate.swift */,
+				B8E27C79268376610008E21F /* Assets.xcassets */,
+				B8E27C7E268376610008E21F /* Info.plist */,
+				B8E27C7B268376610008E21F /* LaunchScreen.storyboard */,
+				B8E27C76268376600008E21F /* Main.storyboard */,
 				B8E27C72268376600008E21F /* SceneDelegate.swift */,
 				B8E27C74268376600008E21F /* ViewController.swift */,
-				B8E27C76268376600008E21F /* Main.storyboard */,
-				B8E27C79268376610008E21F /* Assets.xcassets */,
-				B8E27C7B268376610008E21F /* LaunchScreen.storyboard */,
-				B8E27C7E268376610008E21F /* Info.plist */,
 			);
-			path = AutoLaout_constraint;
+			name = AutoLaout_constraint;
+			path = AutoLayout_constraint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B8E27C6C268376600008E21F /* AutoLaout_constraint */ = {
+		B8E27C6C268376600008E21F /* AutoLayout_constraint */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B8E27C81268376610008E21F /* Build configuration list for PBXNativeTarget "AutoLaout_constraint" */;
+			buildConfigurationList = B8E27C81268376610008E21F /* Build configuration list for PBXNativeTarget "AutoLayout_constraint" */;
 			buildPhases = (
 				B8E27C69268376600008E21F /* Sources */,
 				B8E27C6A268376600008E21F /* Frameworks */,
@@ -82,9 +83,9 @@
 			);
 			dependencies = (
 			);
-			name = AutoLaout_constraint;
+			name = AutoLayout_constraint;
 			productName = AutoLaout_constraint;
-			productReference = B8E27C6D268376600008E21F /* AutoLaout_constraint.app */;
+			productReference = B8E27C6D268376600008E21F /* AutoLayout_constraint.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B8E27C68268376600008E21F /* Build configuration list for PBXProject "AutoLaout_constraint" */;
+			buildConfigurationList = B8E27C68268376600008E21F /* Build configuration list for PBXProject "AutoLayout_constraint" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B8E27C6C268376600008E21F /* AutoLaout_constraint */,
+				B8E27C6C268376600008E21F /* AutoLayout_constraint */,
 			);
 		};
 /* End PBXProject section */
@@ -288,12 +289,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T7976S8FS6;
-				INFOPLIST_FILE = AutoLaout_constraint/Info.plist;
+				INFOPLIST_FILE = AutoLayout_constraint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hyein.AutoLaout-constraint";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hyein.AutoLayout-constraint";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,12 +308,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T7976S8FS6;
-				INFOPLIST_FILE = AutoLaout_constraint/Info.plist;
+				INFOPLIST_FILE = AutoLayout_constraint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hyein.AutoLaout-constraint";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hyein.AutoLayout-constraint";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -322,7 +323,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B8E27C68268376600008E21F /* Build configuration list for PBXProject "AutoLaout_constraint" */ = {
+		B8E27C68268376600008E21F /* Build configuration list for PBXProject "AutoLayout_constraint" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8E27C7F268376610008E21F /* Debug */,
@@ -331,7 +332,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B8E27C81268376610008E21F /* Build configuration list for PBXNativeTarget "AutoLaout_constraint" */ = {
+		B8E27C81268376610008E21F /* Build configuration list for PBXNativeTarget "AutoLayout_constraint" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8E27C82268376610008E21F /* Debug */,
