@@ -28,6 +28,9 @@
                                 <rect key="frame" x="196" y="332" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="EZY_UncheckedBox"/>
+                                <connections>
+                                    <action selector="isAllChecked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ELX-tY-BWf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNk-tV-gmr" userLabel="checkbox1">
                                 <rect key="frame" x="66" y="437" width="22" height="22"/>
@@ -50,6 +53,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="allCheckbox" destination="oQW-bh-UWd" id="1bg-IK-GYx"/>
                         <outlet property="checkbox1" destination="sNk-tV-gmr" id="DRY-nU-bBB"/>
                         <outlet property="checkbox2" destination="PEH-BL-KbN" id="Wrr-Wg-aSF"/>
                         <outlet property="checkbox3" destination="U4t-DK-Wk4" id="gJH-bt-wQ2"/>
