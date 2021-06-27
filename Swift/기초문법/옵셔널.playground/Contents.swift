@@ -1,14 +1,11 @@
 //옵셔널
 //nil일 수도, nil이 아닐 수도 있다.
-
 import Swift
 
 
 //옵셔널 선언
-
 let optionalValue: Optional<Int> = nil
 //let optionalValue: Int? = nil >>> 같은 뜻
-
 
 // 옵셔널 표현
 // !를 이용한 암시적 추출 옵셔널
