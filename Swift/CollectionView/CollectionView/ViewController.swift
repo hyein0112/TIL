@@ -7,18 +7,23 @@
 
 import UIKit
 
-class ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
+
+class ViewController:
+    
+//  필수 프로토콜
+    UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return 30 // 셀의 개수
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as?
-                UICollectionViewCell else {
-                return UICollectionViewCell()
-            }
-            
-            return cell
+        
+//      재사용 가능한 셀이 있으면 재사용, 아니면 새로 생성
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? UICollectionViewCell else {
+                    return UICollectionViewCell()
+                }
+        return cell
     }
     
 
@@ -29,4 +34,3 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
 
 
 }
-
