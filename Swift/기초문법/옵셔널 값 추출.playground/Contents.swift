@@ -43,6 +43,48 @@ if let name = myName, let friend = yourName {
 } // hyein and eunseo
 
 
+//옵셔널 체이닝
+//?로 옵셔널 바인딩 과정을 줄인다
+
+class Person {
+    var name: String
+    var job: String?
+    var home: Apartment?
+    
+    init(name: String) {
+        self.name = name
+    }
+}
+
+class Apartment {
+    var buildingNumber: String
+    var roomNumber: String
+    var `guard`: Person?
+    var owner: Person?
+    
+    init(dong: String, ho: String) {
+        buildingNumber = dong
+        roomNumber = ho
+    }
+}
+
+let hyein: Person? = Person(name: "hyein")
+let apart: Apartment? = Apartment(dong: "112", ho: "527")
+let superman: Person? = Person(name: "superman")
+
+
+func guardJobWithOptionalChaining(owner: Person?) {
+    if let guardJob = owner?.home?.guard?.job {
+        print("우리집 경비원의 직업은 \(guardJob)입니다")
+    } else {
+        print("우리집 경비원은 직업이 없어요")
+    }
+}
+
+guardJobWithOptionalChaining(owner: hyein)
+// 우리집 경비원은 직업이 없어요
+
+
 // 강제 추출
 // 값을 확인 하지 않고 강제로 추출, 값이 없을 때 런타임 오류
 
@@ -52,6 +94,6 @@ var YourName: String! = nil
 printName(MyName!) //hyein
 MyName = nil
 
-//print(MyName!) >>> 런타임 오류
+//print(MyName!) >>> 런타임 에러
 
-//print(YourName) >>> 런타임 오류
+//print(YourName) >>> 런타임 에러
