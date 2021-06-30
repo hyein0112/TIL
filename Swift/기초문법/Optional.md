@@ -91,6 +91,7 @@ if let age = optionalAge, age >= 20 {
 ```
 위 코드는 아래와 동일하다.
 ```swift
+if let age = optionalAge {
 	if age >= 20 {
 		// age의 값이 존재하고, 20 이상
 	}
