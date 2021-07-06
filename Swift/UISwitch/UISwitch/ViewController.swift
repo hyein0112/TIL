@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var UISwitch: UISwitch!
     @IBOutlet weak var message: UILabel!
     
-    var switchFlag = false
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,14 +20,14 @@ class ViewController: UIViewController {
 
     
     @IBAction func `switch`(_ sender: UISwitch) {
-        if switchFlag == false{
+        if sender.isOn{
             view.backgroundColor = UIColor.yellow
             message.text = "ON"
-            switchFlag = true
+           
         }else{
             view.backgroundColor = UIColor.red
             message.text = "OFF"
-            switchFlag = false
+            
             
         }
     }
