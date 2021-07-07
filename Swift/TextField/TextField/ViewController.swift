@@ -20,24 +20,34 @@ class ViewController: UIViewController {
 
     
     @IBAction func submit(_ sender: Any) {
-        if id.text?.isEmpty == false && pw.text?.isEmpty == false{
+        var empty : Bool!
+        
+        func emptyText(){
+            if id.text?.isEmpty == false && pw.text?.isEmpty == false{
+                empty = false
+            }else{
+                empty = true
+            }
+        }
+        
+        emptyText()
+        if empty == false {
             let alert = UIAlertController(title: "Submit", message: "제출 완료", preferredStyle: .alert)
                 
             let action = UIAlertAction(title: "OK", style: .default, handler: .none)
                 alert.addAction(action)
                 present(alert, animated: true, completion: nil)
             clearText()
-        }else{
+        }else {
             let errorAlert = UIAlertController(title: "Error", message: "ID와 PW를 모두 입력해주세요", preferredStyle: .alert)
                 
-            let action = UIAlertAction(title: "OK", style: .default, handler: .none)
+            let action = UIAlertAction(title: "OK", style: .destructive, handler: .none)
                 errorAlert.addAction(action)
                 present(errorAlert, animated: true, completion: nil)
         }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
-
          self.view.endEditing(true)
    }
 
