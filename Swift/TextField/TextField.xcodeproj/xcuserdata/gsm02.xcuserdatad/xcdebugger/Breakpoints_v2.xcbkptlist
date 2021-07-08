@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "4DB9C526-6367-4FB3-9542-D9B39BBA0E8B"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EB1C79FB-D1E9-4302-B0CC-70C7D59FF046"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TextField/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "EB1C79FB-D1E9-4302-B0CC-70C7D59FF046 - 7a7e6a7dc20c290a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TextField.ViewController.id.getter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "TextField"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gsm02/TIL/Swift/TextField/TextField/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "EB1C79FB-D1E9-4302-B0CC-70C7D59FF046 - eed2e78ab0a90456"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TextField.ViewController.id.setter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "TextField"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gsm02/TIL/Swift/TextField/TextField/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "EB1C79FB-D1E9-4302-B0CC-70C7D59FF046 - 42d41c11cf82fca0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TextField.ViewController.id.modify : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "TextField"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gsm02/TIL/Swift/TextField/TextField/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "EB1C79FB-D1E9-4302-B0CC-70C7D59FF046 - 3be405f24958d872"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TextField.ViewController.id.modify : Swift.Optional&lt;__C.UITextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "TextField"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gsm02/TIL/Swift/TextField/TextField/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "EB1C79FB-D1E9-4302-B0CC-70C7D59FF046 - fdbffe3a819fbfc9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TextField.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; TextField.ViewController"
+                  moduleName = "TextField"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gsm02/TIL/Swift/TextField/TextField/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "335">
+               </Location>
+               <Location
+                  uuid = "EB1C79FB-D1E9-4302-B0CC-70C7D59FF046 - 3d9216ac5c054685"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TextField.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;TextField.ViewController&gt;"
+                  moduleName = "TextField"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gsm02/TIL/Swift/TextField/TextField/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "282">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "552AB8EE-C022-4174-8D55-AEA6BC158681"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TextField/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "552AB8EE-C022-4174-8D55-AEA6BC158681 - 857f987206a6f314"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TextField.ViewController.empty.getter : Swift.Optional&lt;Swift.Bool&gt;"
+                  moduleName = "TextField"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gsm02/TIL/Swift/TextField/TextField/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "107">
+               </Location>
+               <Location
+                  uuid = "552AB8EE-C022-4174-8D55-AEA6BC158681 - a089116d02daeb48"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TextField.ViewController.empty.setter : Swift.Optional&lt;Swift.Bool&gt;"
+                  moduleName = "TextField"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gsm02/TIL/Swift/TextField/TextField/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "114">
+               </Location>
+               <Location
+                  uuid = "552AB8EE-C022-4174-8D55-AEA6BC158681 - f30cc2fce9ac8315"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TextField.ViewController.empty.modify : Swift.Optional&lt;Swift.Bool&gt;"
+                  moduleName = "TextField"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gsm02/TIL/Swift/TextField/TextField/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "552AB8EE-C022-4174-8D55-AEA6BC158681 - 1ca9b4957db4cf4a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TextField.ViewController.empty.modify : Swift.Optional&lt;Swift.Bool&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "TextField"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gsm02/TIL/Swift/TextField/TextField/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "552AB8EE-C022-4174-8D55-AEA6BC158681 - fdbffe3a819fbf2c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TextField.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; TextField.ViewController"
+                  moduleName = "TextField"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gsm02/TIL/Swift/TextField/TextField/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "449">
+               </Location>
+               <Location
+                  uuid = "552AB8EE-C022-4174-8D55-AEA6BC158681 - 3d9216ac5c054660"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TextField.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;TextField.ViewController&gt;"
+                  moduleName = "TextField"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gsm02/TIL/Swift/TextField/TextField/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "393">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

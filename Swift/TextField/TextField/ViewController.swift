@@ -13,23 +13,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var id: UITextField!
     @IBOutlet weak var pw: UITextField!
     
+    var empty : Bool!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
     }
 
-    
     @IBAction func submit(_ sender: Any) {
-        var empty : Bool!
-        
-        func emptyText(){
-            if id.text?.isEmpty == false && pw.text?.isEmpty == false{
-                empty = false
-            }else{
-                empty = true
-            }
-        }
-        
         emptyText()
         if empty == false {
             let alert = UIAlertController(title: "Submit", message: "제출 완료", preferredStyle: .alert)
@@ -60,6 +51,13 @@ class ViewController: UIViewController {
         id.text = ""
         pw.text = ""
         memo.text = ""
+    }
+    func emptyText(){
+        if id.text?.isEmpty == false && pw.text?.isEmpty == false{
+            empty = false
+        }else{
+            empty = true
+        }
     }
     
 }
