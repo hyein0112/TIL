@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  WebView
 //
-//  Created by GSM02 on 2021/07/10.
+//  Created by GSM02 on 2021/07/11.
 //
 
 import UIKit
