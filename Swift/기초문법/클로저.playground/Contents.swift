@@ -30,3 +30,17 @@ print(sumResult) //5
 sum = sumFunction(a:b:)
 sumResult = sum(3,4)
 print(sumResult) //7
+
+
+//주로 함수의 전달인자로 사용된다.
+let add: (Int, Int) -> Int
+add = { (a : Int, b : Int) -> Int in
+    return a + b
+}
+func calculate(a : Int, b : Int, method: (Int, Int) -> Int) -> Int{
+    return method(a,b)
+}
+
+var calculated : Int
+calculated = calculate(a: 10, b: 20, method: add)
+print(calculated) //30
