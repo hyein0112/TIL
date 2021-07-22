@@ -17,18 +17,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        imageView.image = imgView
+        imageView.image = imgView 
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         shadow()
     }
 
     func shadow(){
-        shadowView.layer.shadowOffset = CGSize(width: 10, height: 10) //그림자 위치
+        shadowView.layer.shadowOffset = CGSize(width: 7, height: 7) //그림자 위치
         shadowView.layer.shadowOpacity = 0.5 //그림자 투명도 (0~1)
-        shadowView.layer.shadowRadius = 7 //그림자 블러 정도
+        shadowView.layer.shadowRadius = 4 //그림자 블러 정도
         shadowView.layer.shadowColor = UIColor.gray.cgColor //그림자 색
         shadowView.layer.shadowPath = nil //그림자의 모양
+        shadowView.layer.masksToBounds = false //내부에 속한 요소들이 UIView 밖을 벗어날 때, 잘라낼 것인지 설정
         
     }
 }
