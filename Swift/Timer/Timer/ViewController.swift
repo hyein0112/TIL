@@ -10,8 +10,8 @@ import UIKit
 class ViewController: UIViewController {
 
     let timeSelector: Selector = #selector(ViewController.updateTime)
-        let interval = 1.0 // 타이머 간격 값
-        var count = 0
+    let interval = 1.0 // 타이머 간격 값
+    var count = 0
 
     @IBOutlet weak var showTime: UILabel!
     
