@@ -24,9 +24,9 @@ class ViewController: UIViewController {
     }
 
     func configureUI(){
-        yellowButton.layer.borderWidth = 1
-        yellowButton.layer.borderColor = .Yellow
-        yellowButton.setTitleColor(.Yellow, for: .normal)
+        yellowButton.layer.borderWidth = 1 //border 두께
+        yellowButton.layer.borderColor = .Yellow //border 색
+        yellowButton.setTitleColor(.Yellow, for: .normal) // title 색
         
         purpleButton.layer.borderWidth = 1
         purpleButton.layer.borderColor = .Purple
@@ -40,6 +40,7 @@ class ViewController: UIViewController {
     }
     
     func cornerRaidus(){
+        //각 버튼의 모서리를 10정도 둥글게 설정
         yellowButton.layer.cornerRadius = 10
         purpleButton.layer.cornerRadius = 10
         orangeButton.layer.cornerRadius = 10
@@ -47,6 +48,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func tabYellow(_ sender: UIButton) {
+        //버튼을 눌렀을 때 색상전환
         if yellowFlag == false {
             yellowButton.backgroundColor = .Yellow
             yellowButton.setTitleColor(.white, for: .normal)
@@ -59,6 +61,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tabPurple(_ sender: UIButton) {
+        //버튼을 눌렀을 때 색상전환
         if purpleFlag == false {
             purpleButton.backgroundColor = .Purple
             purpleButton.setTitleColor(.white, for: .normal)
@@ -71,6 +74,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tabOrange(_ sender: UIButton) {
+        //버튼을 눌렀을 때 색상전환
         if orangeFlag == false {
             orangeButton.backgroundColor = .Orange
             orangeButton.setTitleColor(.white, for: .normal)
@@ -85,7 +89,7 @@ class ViewController: UIViewController {
 
 extension UIColor{
     static func rgb(red: CGFloat ,green: CGFloat,blue:CGFloat) -> UIColor{
-        return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
+        return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1) //rgb 설정
     }
     static let Yellow = UIColor.rgb(red: 255, green: 209, blue: 141)
     static let Purple = UIColor.rgb(red: 150, green: 141, blue: 255)
