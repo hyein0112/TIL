@@ -43,7 +43,7 @@ class ViewController: UIViewController {
             // timeInterval - 간격, target - 동작될 view, selector - 타이머가 구동될 때 실행 될 함수, userInfo - 사용자 정보, repeats - 반복여부
             isStarting = true
             startStopButton.setTitle("Stop!", for: .normal) //Start -> Stop
-        }else{
+        }else{ //Stop 버튼 눌렀을 때
             startStopButton.setTitle("Start!", for: .normal) //Stop -> Start
             timer.invalidate() //타이머 정지
             isStarting = false
