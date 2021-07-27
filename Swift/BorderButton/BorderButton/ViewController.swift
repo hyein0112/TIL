@@ -87,17 +87,20 @@ class ViewController: UIViewController {
     }
 }
 
-extension UIColor{
+extension UIColor{ //UIColor
+    
+    //rgb값으로 색 생성
     static func rgb(red: CGFloat ,green: CGFloat,blue:CGFloat) -> UIColor{
-        return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1) //rgb 설정
+        return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
     }
-    static let Yellow = UIColor.rgb(red: 255, green: 209, blue: 141)
-    static let Purple = UIColor.rgb(red: 150, green: 141, blue: 255)
-    static let Orange = UIColor.rgb(red: 255, green: 166, blue: 128)
+  
+    static let Yellow = UIColor.rgb(red: 255, green: 209, blue: 141) //Yellow 정의
+    static let Purple = UIColor.rgb(red: 150, green: 141, blue: 255) //Purple 정의
+    static let Orange = UIColor.rgb(red: 255, green: 166, blue: 128) //Orange 정의
 }
 
-extension CGColor{
-    static let Yellow = UIColor.rgb(red: 255, green: 209, blue: 141).cgColor
-    static let Purple = UIColor.rgb(red: 150, green: 141, blue: 255).cgColor
-    static let Orange = UIColor.rgb(red: 255, green: 166, blue: 128).cgColor
+extension CGColor{ //CGColor
+    static let Yellow = UIColor.rgb(red: 255, green: 209, blue: 141).cgColor //Yellow 정의
+    static let Purple = UIColor.rgb(red: 150, green: 141, blue: 255).cgColor //Purple 정의
+    static let Orange = UIColor.rgb(red: 255, green: 166, blue: 128).cgColor //Orange 정의
 }

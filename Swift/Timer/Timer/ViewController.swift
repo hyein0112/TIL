@@ -13,8 +13,10 @@ class ViewController: UIViewController {
     let interval = 1.0 // 타이머 간격 값
     var count = 0
     var timer = Timer()
+    var isStarting = false
 
     @IBOutlet weak var showTime: UILabel!
+    @IBOutlet weak var startStopButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -36,13 +38,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tapStartButton(_ sender: Any) {
-        timer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: timeSelector, userInfo: nil, repeats: true)
-              // timeInterval - 간격, target - 동작될 view, selector - 타이머가 구동될 때 실행 될 함수, userInfo - 사용자 정보, repeats - 반복여부
+        if isStarting == false{  //Start 버튼 눌렀을 때
+            timer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: timeSelector, userInfo: nil, repeats: true)
+            // timeInterval - 간격, target - 동작될 view, selector - 타이머가 구동될 때 실행 될 함수, userInfo - 사용자 정보, repeats - 반복여부
+            isStarting = true
+            startStopButton.setTitle("Stop!", for: .normal) //Start -> Stop
+        }else{
+            startStopButton.setTitle("Start!", for: .normal) //Stop -> Start
+            timer.invalidate() //타이머 정지
+            isStarting = false
+        }
+        
     }
-    @IBAction func tabStopButton(_ sender: Any) {
-        self.timer.invalidate()
-    
-    }
+   
     
 
 }
