@@ -40,7 +40,13 @@
                             <constraint firstItem="ati-4n-P8z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="alP-up-miJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="fDO-f7-knX"/>
+                    <navigationItem key="navigationItem" id="fDO-f7-knX">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="Ifo-d5-vP5">
+                            <connections>
+                                <action selector="TabAdd:" destination="BYZ-38-t0r" id="ewk-J5-Jb1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ati-4n-P8z" id="Z8h-wG-Xij"/>
                     </connections>
