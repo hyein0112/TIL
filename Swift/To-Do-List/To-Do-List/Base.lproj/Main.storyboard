@@ -55,25 +55,43 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Entry View Controller-->
         <scene sceneID="Oh7-vp-Fms">
             <objects>
-                <viewController id="K49-fv-xfO" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="entry" id="K49-fv-xfO" customClass="EntryViewController" customModule="To_Do_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G5j-MB-GI1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iiX-Xz-DPM">
+                                <rect key="frame" x="20" y="64" width="374" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="XHt-Rc-J9N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="3sT-Yv-8a8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="iiX-Xz-DPM" firstAttribute="leading" secondItem="3sT-Yv-8a8" secondAttribute="leading" constant="20" id="MUD-D7-Npp"/>
+                            <constraint firstItem="iiX-Xz-DPM" firstAttribute="top" secondItem="3sT-Yv-8a8" secondAttribute="top" constant="20" id="aEf-bl-k50"/>
+                            <constraint firstItem="3sT-Yv-8a8" firstAttribute="trailing" secondItem="iiX-Xz-DPM" secondAttribute="trailing" constant="20" id="xWR-qb-uIM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="field" destination="iiX-Xz-DPM" id="kqI-jy-3e5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2Y-GM-Lhq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="929" y="783"/>
         </scene>
-        <!--View Controller-->
+        <!--Task View Controller-->
         <scene sceneID="9cS-Oq-iuV">
             <objects>
-                <viewController id="Arm-cc-iVE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="task" id="Arm-cc-iVE" customClass="TaskViewController" customModule="To_Do_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Omo-mU-gK3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,6 +123,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
