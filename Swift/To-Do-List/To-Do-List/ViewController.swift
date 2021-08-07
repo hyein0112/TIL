@@ -20,12 +20,33 @@ class ViewController: UIViewController {
         self.title = "Tasks"
         tableView.delegate = self
         tableView.dataSource = self
+        
+        if !UserDefaults().bool(forKey: "setup"){
+            UserDefaults().set(true, forKey: "setup")
+            UserDefaults().set(0, forKey: "count")
+        }
+        updateTask()
     }
     
+    func updateTask(){
+        guard let count = UserDefaults().value(forKey: "count") as? Int else{
+            return
+        }
+        for i in 0..<count{
+            if let task = UserDefaults().value(forKey: "task_\(i+1)") as? String {
+                tasks.append(task)
+            }
+        }
+    }
     
     @IBAction func TabAdd(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(identifier: "entry") as! EntryViewController
         vc.title = "New Task"
+        vc.update = {
+            DispatchQueue.main.async{
+                self.updateTask()
+            }
+        }
         navigationController?.pushViewController(vc, animated: true )
     }
 }
