@@ -29,6 +29,8 @@ class ViewController: UIViewController {
     }
     
     func updateTask(){
+        
+        tasks.removeAll()
         guard let count = UserDefaults().value(forKey: "count") as? Int else{
             return
         }
@@ -37,6 +39,7 @@ class ViewController: UIViewController {
                 tasks.append(task)
             }
         }
+        tableView.reloadData()
     }
     
     @IBAction func TabAdd(_ sender: Any) {
@@ -47,7 +50,7 @@ class ViewController: UIViewController {
                 self.updateTask()
             }
         }
-        navigationController?.pushViewController(vc, animated: true )
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -56,6 +59,11 @@ class ViewController: UIViewController {
 extension ViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let vc = storyboard?.instantiateViewController(identifier: "task") as! TaskViewController
+        vc.title = "New Task"
+        vc.task = tasks[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
