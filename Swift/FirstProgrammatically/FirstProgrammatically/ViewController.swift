@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var flag = false
+    
     //label 생성
     let label : UILabel = {
         let label = UILabel()
@@ -26,6 +28,7 @@ class ViewController: UIViewController {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 20) //폰트, 폰트사이즈
         button.setTitleColor(.white, for: .normal) //타이틀 색
         button.backgroundColor = .purple //배경색
+        button.addTarget(self, action: #selector(tapButton), for: .touchUpInside) //버튼을 눌렀을 때 tapButton 함수를 실행
         return button
     }()
     
@@ -41,6 +44,16 @@ class ViewController: UIViewController {
         button.frame = CGRect(x: 150, y: 400, width: 100, height: 30) //button의 위치 및 크기
     }
     
+    //버튼을 눌렀을 때 실행
+    @objc func tapButton(){
+        if flag == false{
+            label.text = "라벨"
+            flag = true
+        }else{
+            label.text = "LABEL"
+            flag = false
+        }
+    }
 }
 
 // MARK: - Priview
