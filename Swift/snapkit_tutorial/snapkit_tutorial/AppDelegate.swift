@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  SnapKit
+//  snapkit_tutorial
 //
-//  Created by GSM02 on 2021/08/15.
+//  Created by GSM02 on 2021/08/16.
 //
 
 import UIKit
