@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		B820909B26CC012000EEB168 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B820909926CC012000EEB168 /* Main.storyboard */; };
 		B820909D26CC012300EEB168 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B820909C26CC012300EEB168 /* Assets.xcassets */; };
 		B82090A026CC012300EEB168 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B820909E26CC012300EEB168 /* LaunchScreen.storyboard */; };
+		B82090A926CC05F800EEB168 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = B82090A826CC05F800EEB168 /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B82090A926CC05F800EEB168 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = then_tutorial;
+			packageProductDependencies = (
+				B82090A826CC05F800EEB168 /* Then */,
+			);
 			productName = then_tutorial;
 			productReference = B820909026CC012000EEB168 /* then_tutorial.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +115,9 @@
 				Base,
 			);
 			mainGroup = B820908726CC012000EEB168;
+			packageReferences = (
+				B82090A726CC05F800EEB168 /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = B820909126CC012000EEB168 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -341,6 +349,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B82090A726CC05F800EEB168 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B82090A826CC05F800EEB168 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B82090A726CC05F800EEB168 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B820908826CC012000EEB168 /* Project object */;
 }
