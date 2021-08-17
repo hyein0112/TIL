@@ -57,6 +57,40 @@ class ViewController: UIViewController {
         let myDarkGrayButton = myButton(.darkGray)
         self.view.addSubview(myDarkGrayButton)
         
+//        yellowBox.translatesAutoresizingMaskIntoConstraints = false
+//        greenBox.translatesAutoresizingMaskIntoConstraints = false
+//        redBox.translatesAutoresizingMaskIntoConstraints = false
+//        blueBox.translatesAutoresizingMaskIntoConstraints = false
+//
+//        // 기존 오토레이아웃
+//        yellowBox.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
+//        yellowBox.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20).isActive = true
+//        yellowBox.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 20).isActive = true
+//        yellowBox.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -20).isActive = true
+
+        
+//        myDarkGrayBtn.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([
+//            myDarkGrayBtn.widthAnchor.constraint(equalToConstant: 200),
+//            myDarkGrayBtn.heightAnchor.constraint(equalToConstant: 100),
+//            myDarkGrayBtn.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
+//            myDarkGrayBtn.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
+        
+        
+//        greenBox.translatesAutoresizingMaskIntoConstraints = false
+//
+//        greenBoxTopNSLayoutConstraint = greenBox.topAnchor.constraint(equalTo: self.blueBox.bottomAnchor, constant: 20)
+//
+//        NSLayoutConstraint.activate([
+//            greenBox.widthAnchor.constraint(equalToConstant: 100),
+//            greenBox.heightAnchor.constraint(equalToConstant: 100),
+//            greenBox.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+//
+//        ])
+//
+//        greenBoxTopNSLayoutConstraint?.isActive = true
+
+        
         //스냅킷 사용
         yellowBox.snp.makeConstraints { (make) in
 //            make.edges.equalTo(self.view).inset(UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
