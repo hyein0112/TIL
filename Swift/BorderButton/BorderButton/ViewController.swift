@@ -43,35 +43,13 @@ class ViewController: UIViewController {
         $0.layer.borderWidth = 1
         $0.layer.borderColor = .Orange
         $0.layer.cornerRadius = 10
-        $0.addTarget(self, action: #selector(tapOrange), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(tapYellow), for: .touchUpInside)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.view.addSubview(yellowButton)
-        self.view.addSubview(purpleButton)
-        self.view.addSubview(orangeButton)
-        
-
-        yellowButton.snp.makeConstraints{(make) in
-            make.width.equalTo(90)
-            make.height.equalTo(35)
-            make.centerX.equalToSuperview()
-            make.centerY.equalTo(purpleButton.snp.bottom).inset(100)
-        }
-        purpleButton.snp.makeConstraints{(make) in
-            make.width.equalTo(90)
-            make.height.equalTo(35)
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
-        }
-        orangeButton.snp.makeConstraints{(make) in
-            make.width.equalTo(90)
-            make.height.equalTo(35)
-            make.centerX.equalToSuperview()
-            make.centerY.equalTo(purpleButton.snp.top).offset(100)
-        }
+        configureUI()
     }
     
     @objc func tapYellow(){
@@ -107,7 +85,32 @@ class ViewController: UIViewController {
             orangeFlag = false
         }
     }
+    
+    func configureUI() {
+        self.view.addSubview(yellowButton)
+        self.view.addSubview(purpleButton)
+        self.view.addSubview(orangeButton)
+        
 
+        yellowButton.snp.makeConstraints{(make) in
+            make.width.equalTo(90)
+            make.height.equalTo(35)
+            make.centerX.equalToSuperview()
+            make.centerY.equalTo(purpleButton.snp.bottom).inset(100)
+        }
+        purpleButton.snp.makeConstraints{(make) in
+            make.width.equalTo(90)
+            make.height.equalTo(35)
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+        }
+        orangeButton.snp.makeConstraints{(make) in
+            make.width.equalTo(90)
+            make.height.equalTo(35)
+            make.centerX.equalToSuperview()
+            make.centerY.equalTo(purpleButton.snp.top).offset(100)
+        }
+    }
 
 }
 
