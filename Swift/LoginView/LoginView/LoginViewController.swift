@@ -12,10 +12,13 @@ import Then
 
 class LoginViewController: UIViewController {
     
+    var imageView = UIImageView().then {
+        $0.image = UIImage(named:"bgimage.png")
+    }
     var mainLabel = UILabel().then {
-        $0.text = "LOGIN"
+        $0.text = "ASSIGNMENT"
         $0.textColor = .white
-        $0.font = .boldSystemFont(ofSize: 40)
+        $0.font = .systemFont(ofSize: 30)
     }
     var backgroundView = UIView().then {
         $0.backgroundColor = .white
@@ -23,7 +26,7 @@ class LoginViewController: UIViewController {
     }
     var titleLabel = UILabel().then {
         $0.text = "로그인"
-        $0.font = .systemFont(ofSize: 23)
+        $0.font = .systemFont(ofSize: 25)
         $0.textColor = .darkGray
     }
     var idLabel = UILabel().then {
@@ -35,19 +38,19 @@ class LoginViewController: UIViewController {
         $0.textColor = .darkGray
     }
     var idField = UITextField().then {
-        $0.placeholder = "   id를 입력하세요"
+        $0.placeholder = "id를 입력하세요"
         $0.backgroundColor = UIColor(red: 236/255, green: 236/255, blue: 236/255, alpha: 1)
         $0.layer.cornerRadius = 5
     }
     var pwField = UITextField().then {
-        $0.placeholder = "   pw를 입력하세요"
+        $0.placeholder = "pw를 입력하세요"
         $0.backgroundColor = UIColor(red: 236/255, green: 236/255, blue: 236/255, alpha: 1)
         $0.layer.cornerRadius = 5
     }
     var loginButton = UIButton().then {
         $0.setTitle("로그인", for: .normal)
-        $0.titleLabel?.font = .boldSystemFont(ofSize: 18)
-        $0.backgroundColor = UIColor(red: 130 / 255, green: 134 / 255, blue: 150 / 255, alpha : 1)
+        $0.titleLabel?.font = .systemFont(ofSize: 16)
+        $0.backgroundColor = UIColor(red: 76 / 255, green: 96 / 255, blue: 144 / 255, alpha : 1)
         $0.setTitleColor(.white, for: .normal)
         $0.layer.cornerRadius = 10
     }
@@ -64,7 +67,11 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        view.backgroundColor = UIColor(red: 130 / 255, green: 134 / 255, blue: 150 / 255, alpha : 1)
+        configureUI()
+    }
+    
+    func configureUI() {
+        self.view.addSubview(imageView)
         self.view.addSubview(mainLabel)
         self.view.addSubview(backgroundView)
         self.view.addSubview(titleLabel)
@@ -76,63 +83,68 @@ class LoginViewController: UIViewController {
         self.view.addSubview(forgotPwButton)
         self.view.addSubview(notSignedUpButton)
         
-        mainLabel.snp.makeConstraints { (make) in
-            make.width.height.equalTo(self.mainLabel)
-            make.centerX.equalToSuperview()
-            make.centerY.equalTo(120)
-        }
-        backgroundView.snp.makeConstraints { (make) in
-            make.height.equalTo(430)
-            make.width.equalTo(350)
+        imageView.snp.makeConstraints { (make) in
+            make.width.height.equalToSuperview()
             make.center.equalToSuperview()
         }
+        mainLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(60)
+            make.centerX.equalToSuperview()
+        }
+        backgroundView.snp.makeConstraints { (make) in
+            make.width.equalTo(340)
+            make.height.equalTo(414)
+            make.top.equalTo(160)
+            make.centerX.equalToSuperview()
+        }
         titleLabel.snp.makeConstraints { (make) in
-            make.height.width.equalTo(self.titleLabel)
+            make.width.equalTo(67)
+            make.height.equalTo(31)
             make.centerX.equalToSuperview()
             make.centerY.equalTo(backgroundView.snp.top).offset(50)
         }
         idLabel.snp.makeConstraints { (make) in
             make.width.height.equalTo(self.idLabel)
-            make.centerX.equalTo(backgroundView.snp.left).offset(60)
-            make.centerY.equalTo(backgroundView.snp.top).offset(130)
+            make.left.equalTo(backgroundView.snp.left).offset(20)
+            make.top.equalTo(backgroundView.snp.top).offset(134)
         }
         pwLabel.snp.makeConstraints { (make) in
             make.width.height.equalTo(self.idLabel)
-            make.centerX.equalTo(backgroundView.snp.left).offset(60)
-            make.centerY.equalTo(idLabel.snp.bottom).offset(60)
+            make.left.equalTo(backgroundView.snp.left).offset(20)
+            make.top.equalTo(backgroundView.snp.top).offset(185)
         }
         idField.snp.makeConstraints { (make) in
-            make.width.equalTo(230)
-            make.height.equalTo(50)
-            make.centerX.equalTo(idLabel.snp.right).offset(125)
+            make.width.equalTo(240)
+            make.height.equalTo(36)
             make.centerY.equalTo(idLabel.snp.centerY)
+            make.left.equalTo(idLabel.snp.right).offset(5)
         }
         pwField.snp.makeConstraints { (make) in
-            make.width.equalTo(230)
-            make.height.equalTo(50)
-            make.centerX.equalTo(idField.snp.centerX)
+            make.width.equalTo(240)
+            make.height.equalTo(36)
+            make.left.equalTo(idField.snp.left)
             make.centerY.equalTo(pwLabel.snp.centerY)
         }
         loginButton.snp.makeConstraints { (make) in
-            make.width.equalTo(280)
-            make.height.equalTo(40)
+            make.width.equalTo(272)
+            make.height.equalTo(36)
             make.centerX.equalToSuperview()
-            make.centerY.equalTo(backgroundView.snp.bottom).inset(130)
+            make.top.equalTo(pwField.snp.bottom).offset(43)
         }
         forgotPwButton.snp.makeConstraints { (make) in
             make.width.height.equalToSuperview()
             make.centerX.equalToSuperview()
-            make.centerY.equalTo(backgroundView.snp.bottom).inset(45)
+            make.centerY.equalTo(backgroundView.snp.bottom).inset(40)
         }
         notSignedUpButton.snp.makeConstraints { (make) in
             make.width.height.equalToSuperview()
             make.centerX.equalToSuperview()
-            make.centerY.equalTo(self.view.snp.bottom).inset(100)
+            make.centerY.equalTo(self.view.snp.bottom).inset(70)
         }
     }
-
-
 }
+        
+        
 
 //MARK: - Preview
 #if DEBUG
