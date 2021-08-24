@@ -13,6 +13,7 @@
 		B89DC9302690A53900A45FE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89DC92E2690A53900A45FE5 /* Main.storyboard */; };
 		B89DC9322690A53A00A45FE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B89DC9312690A53A00A45FE5 /* Assets.xcassets */; };
 		B89DC9352690A53A00A45FE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89DC9332690A53A00A45FE5 /* LaunchScreen.storyboard */; };
+		B8AC04EB26D46595004896F4 /* AddTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AC04EA26D46595004896F4 /* AddTodoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B89DC9312690A53A00A45FE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B89DC9342690A53A00A45FE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B89DC9362690A53A00A45FE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8AC04EA26D46595004896F4 /* AddTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				B89DC92E2690A53900A45FE5 /* Main.storyboard */,
 				B89DC9312690A53A00A45FE5 /* Assets.xcassets */,
 				B89DC9332690A53A00A45FE5 /* LaunchScreen.storyboard */,
+				B8AC04EA26D46595004896F4 /* AddTodoViewController.swift */,
 				B89DC9362690A53A00A45FE5 /* Info.plist */,
 			);
 			path = ToDoList;
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8AC04EB26D46595004896F4 /* AddTodoViewController.swift in Sources */,
 				B89DC92D2690A53900A45FE5 /* ViewController.swift in Sources */,
 				B89DC9292690A53900A45FE5 /* AppDelegate.swift in Sources */,
 				B89DC92B2690A53900A45FE5 /* SceneDelegate.swift in Sources */,

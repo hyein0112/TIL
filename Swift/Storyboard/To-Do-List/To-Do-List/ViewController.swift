@@ -16,7 +16,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+ 
         self.title = "Tasks"
         tableView.delegate = self
         tableView.dataSource = self
@@ -34,6 +34,10 @@ class ViewController: UIViewController {
         guard let count = UserDefaults().value(forKey: "count") as? Int else{
             return
         }
+        if count==0{
+            return
+        }
+        
         for i in 0..<count{
             if let task = UserDefaults().value(forKey: "task_\(i+1)") as? String {
                 tasks.append(task)
@@ -52,6 +56,7 @@ class ViewController: UIViewController {
         }
         navigationController?.pushViewController(vc, animated: true)
     }
+    
 }
 
 
@@ -61,7 +66,9 @@ extension ViewController : UITableViewDelegate{
         tableView.deselectRow(at: indexPath, animated: true)
         
         let vc = storyboard?.instantiateViewController(identifier: "task") as! TaskViewController
+        vc.delegate = self
         vc.title = "New Task"
+        vc.index = indexPath
         vc.task = tasks[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -80,4 +87,14 @@ extension ViewController : UITableViewDataSource{
     }
     
      
+}
+extension ViewController : didfinishDelete{
+    func reload() {
+        navigationController?.popViewController(animated: true)
+        updateTask()
+        tableView.reloadData()
+    }
+    
+    
+    
 }

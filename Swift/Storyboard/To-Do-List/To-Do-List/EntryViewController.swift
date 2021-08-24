@@ -42,4 +42,6 @@ class EntryViewController: UIViewController, UITextFieldDelegate {
         
         navigationController?.popViewController(animated: true)
     }
+    
+    
 }

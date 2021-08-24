@@ -63,8 +63,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iiX-Xz-DPM">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="할 일을 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iiX-Xz-DPM">
                                 <rect key="frame" x="20" y="64" width="374" height="52"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="XHt-Rc-J9N"/>
                                 </constraints>
@@ -73,7 +74,7 @@
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3sT-Yv-8a8"/>
-                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iiX-Xz-DPM" firstAttribute="leading" secondItem="3sT-Yv-8a8" secondAttribute="leading" constant="20" id="MUD-D7-Npp"/>
                             <constraint firstItem="iiX-Xz-DPM" firstAttribute="top" secondItem="3sT-Yv-8a8" secondAttribute="top" constant="20" id="aEf-bl-k50"/>
@@ -86,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2Y-GM-Lhq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="929" y="783"/>
+            <point key="canvasLocation" x="1109" y="741"/>
         </scene>
         <!--Task View Controller-->
         <scene sceneID="9cS-Oq-iuV">
@@ -96,24 +97,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBw-JO-zO4">
-                                <rect key="frame" x="12" y="56" width="390" height="794"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PTN-fd-Bud">
+                                <rect key="frame" x="30" y="74" width="354" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="oRU-Yd-oZn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="73I-te-tz0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="IBw-JO-zO4" firstAttribute="top" secondItem="73I-te-tz0" secondAttribute="top" constant="12" id="ER7-Sd-36w"/>
-                            <constraint firstItem="73I-te-tz0" firstAttribute="trailing" secondItem="IBw-JO-zO4" secondAttribute="trailing" constant="12" id="scj-ZB-wPr"/>
-                            <constraint firstItem="IBw-JO-zO4" firstAttribute="leading" secondItem="73I-te-tz0" secondAttribute="leading" constant="12" id="vKo-UY-2go"/>
-                            <constraint firstItem="73I-te-tz0" firstAttribute="bottom" secondItem="IBw-JO-zO4" secondAttribute="bottom" constant="12" id="vUt-Lf-UEj"/>
+                            <constraint firstItem="73I-te-tz0" firstAttribute="trailing" secondItem="PTN-fd-Bud" secondAttribute="trailing" constant="30" id="3lN-2M-cNJ"/>
+                            <constraint firstItem="PTN-fd-Bud" firstAttribute="top" secondItem="73I-te-tz0" secondAttribute="top" constant="30" id="pbM-Tn-QED"/>
+                            <constraint firstItem="PTN-fd-Bud" firstAttribute="leading" secondItem="73I-te-tz0" secondAttribute="leading" constant="30" id="vZp-YK-Fc6"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="lable" destination="IBw-JO-zO4" id="jor-Go-Cju"/>
+                        <outlet property="lable" destination="PTN-fd-Bud" id="e6H-om-kg1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0wZ-uR-PPi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -140,11 +142,11 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
