@@ -13,20 +13,20 @@ protocol didfinishDelete : class{
 class TaskViewController: UIViewController {
 
     @IBOutlet var lable: UITextField!
+    @IBOutlet weak var updateButton: UIButton!
     
     var task: String?
     var index : IndexPath?
     weak var delegate: didfinishDelete?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         lable.text = task
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Delete", style: .done, target: self, action: #selector(deleteTask))
     }
+   
     
     @objc func deleteTask(){
-        
         guard let count = UserDefaults().value(forKey: "count") as? Int else{
             return
         }
@@ -38,4 +38,8 @@ class TaskViewController: UIViewController {
     }
 
 
+    @IBAction func textUpdate(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }

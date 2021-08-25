@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  SignUpViewController.swift
 //  loginview
 //
-//  Created by GSM02 on 2021/08/23.
+//  Created by GSM02 on 2021/08/24.
 //
 
 import UIKit
@@ -10,8 +10,8 @@ import UIKit
 import SnapKit
 import Then
 
-class LoginViewController: UIViewController {
-    
+class SignUpViewController: UIViewController {
+
     var imageView = UIImageView().then {
         $0.image = UIImage(named:"bgimage.png")
     }
@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
         $0.layer.cornerRadius =  20
     }
     var titleLabel = UILabel().then {
-        $0.text = "로그인"
+        $0.text = "회원가입"
         $0.font = .systemFont(ofSize: 25)
         $0.textColor = .darkGray
     }
@@ -35,6 +35,16 @@ class LoginViewController: UIViewController {
     }
     var pwLabel = UILabel().then {
         $0.text = "비밀번호"
+        $0.textColor = .darkGray
+    }
+    var pwCheckLabel = UILabel().then {
+        $0.numberOfLines = 2
+        $0.text = "비밀번호\n확인"
+        $0.textAlignment = .center
+        $0.textColor = .darkGray
+    }
+    var callNumLabel = UILabel().then {
+        $0.text = "전화번호"
         $0.textColor = .darkGray
     }
     var idField = UITextField().then {
@@ -47,23 +57,29 @@ class LoginViewController: UIViewController {
         $0.backgroundColor = UIColor(red: 236/255, green: 236/255, blue: 236/255, alpha: 1)
         $0.layer.cornerRadius = 5
     }
-    var loginButton = UIButton().then {
-        $0.setTitle("로그인", for: .normal)
+    var pwCheckField = UITextField().then {
+        $0.placeholder = "pw를 다시 입력하세요"
+        $0.backgroundColor = UIColor(red: 236/255, green: 236/255, blue: 236/255, alpha: 1)
+        $0.layer.cornerRadius = 5
+    }
+    var callNumField = UITextField().then {
+        $0.placeholder = "전화번호를 입력하세요"
+        $0.backgroundColor = UIColor(red: 236/255, green: 236/255, blue: 236/255, alpha: 1)
+        $0.layer.cornerRadius = 5
+    }
+    var signUpButton = UIButton().then {
+        $0.setTitle("회원가입", for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 16)
         $0.backgroundColor = UIColor(red: 76 / 255, green: 96 / 255, blue: 144 / 255, alpha : 1)
         $0.setTitleColor(.white, for: .normal)
         $0.layer.cornerRadius = 10
     }
-    var forgotPwButton = UIButton().then {
-        $0.setTitle("비밀번호를 잊으셨나요?", for: .normal)
-        $0.setTitleColor(UIColor(red: 130 / 255, green: 134 / 255, blue: 150 / 255, alpha : 1), for: .normal)
-        $0.titleLabel?.font = .boldSystemFont(ofSize: 15)
-    }
-    var notSignedUpButton = UIButton().then {
-        $0.setTitle("아직 회원이 아니신가요?", for: .normal)
+    
+    var alreadySignedUpButton = UIButton().then {
+        $0.setTitle("이미 회원이신가요?", for: .normal)
         $0.setTitleColor(.white, for: .normal)
         $0.titleLabel?.font = .boldSystemFont(ofSize: 15)
-        $0.addTarget(self, action: #selector(tabNotSignUp), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(tabAlreadySignUp), for: .touchUpInside)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,11 +94,14 @@ class LoginViewController: UIViewController {
         self.view.addSubview(titleLabel)
         self.view.addSubview(idLabel)
         self.view.addSubview(pwLabel)
+        self.view.addSubview(pwCheckLabel)
+        self.view.addSubview(callNumLabel)
         self.view.addSubview(idField)
         self.view.addSubview(pwField)
-        self.view.addSubview(loginButton)
-        self.view.addSubview(forgotPwButton)
-        self.view.addSubview(notSignedUpButton)
+        self.view.addSubview(pwCheckField)
+        self.view.addSubview(callNumField)
+        self.view.addSubview(signUpButton)
+        self.view.addSubview(alreadySignedUpButton)
         
         imageView.snp.makeConstraints { (make) in
             make.width.height.equalToSuperview()
@@ -99,7 +118,7 @@ class LoginViewController: UIViewController {
             make.centerX.equalToSuperview()
         }
         titleLabel.snp.makeConstraints { (make) in
-            make.width.equalTo(67)
+            make.width.equalTo(100)
             make.height.equalTo(31)
             make.centerX.equalToSuperview()
             make.centerY.equalTo(backgroundView.snp.top).offset(50)
@@ -107,12 +126,23 @@ class LoginViewController: UIViewController {
         idLabel.snp.makeConstraints { (make) in
             make.width.height.equalTo(self.idLabel)
             make.left.equalTo(backgroundView.snp.left).offset(20)
-            make.top.equalTo(backgroundView.snp.top).offset(134)
+            make.top.equalTo(backgroundView.snp.top).offset(110)
         }
         pwLabel.snp.makeConstraints { (make) in
             make.width.height.equalTo(self.idLabel)
             make.left.equalTo(backgroundView.snp.left).offset(20)
-            make.top.equalTo(backgroundView.snp.top).offset(185)
+            make.top.equalTo(idLabel.snp.bottom).offset(35)
+        }
+        pwCheckLabel.snp.makeConstraints { (make) in
+            make.width.equalTo(pwLabel.snp.width)
+            make.height.equalTo(50)
+            make.left.equalTo(backgroundView.snp.left).offset(20)
+            make.top.equalTo(pwLabel.snp.bottom).offset(22)
+        }
+        callNumLabel.snp.makeConstraints { (make) in
+            make.width.height.equalTo(self.idLabel)
+            make.left.equalTo(backgroundView.snp.left).offset(20)
+            make.top.equalTo(pwCheckLabel.snp.bottom).offset(20)
         }
         idField.snp.makeConstraints { (make) in
             make.width.equalTo(240)
@@ -126,51 +156,57 @@ class LoginViewController: UIViewController {
             make.left.equalTo(idField.snp.left)
             make.centerY.equalTo(pwLabel.snp.centerY)
         }
-        loginButton.snp.makeConstraints { (make) in
+        pwCheckField.snp.makeConstraints { (make) in
+            make.width.equalTo(240)
+            make.height.equalTo(36)
+            make.centerY.equalTo(pwCheckLabel.snp.centerY)
+            make.left.equalTo(idField.snp.left)
+        }
+        callNumField.snp.makeConstraints { (make) in
+            make.width.equalTo(240)
+            make.height.equalTo(36)
+            make.left.equalTo(idField.snp.left)
+            make.centerY.equalTo(callNumLabel.snp.centerY)
+        }
+        signUpButton.snp.makeConstraints { (make) in
             make.width.equalTo(272)
             make.height.equalTo(36)
             make.centerX.equalToSuperview()
-            make.top.equalTo(pwField.snp.bottom).offset(43)
+            make.top.equalTo(callNumField.snp.bottom).offset(40)
         }
-        forgotPwButton.snp.makeConstraints { (make) in
-            make.width.height.equalToSuperview()
-            make.centerX.equalToSuperview()
-            make.centerY.equalTo(backgroundView.snp.bottom).inset(40)
-        }
-        notSignedUpButton.snp.makeConstraints { (make) in
+        alreadySignedUpButton.snp.makeConstraints { (make) in
             make.width.height.equalToSuperview()
             make.centerX.equalToSuperview()
             make.centerY.equalTo(self.view.snp.bottom).inset(70)
         }
     }
     
-    @objc func tabNotSignUp() {
-        let controller = SignUpViewController()
+    @objc func tabAlreadySignUp() {
+        let controller = LoginViewController()
             navigationController?.pushViewController(controller, animated: true)
     }
 }
-        
         
 
 //MARK: - Preview
 #if DEBUG
 import SwiftUI
-struct LoginViewControllerRepresentable: UIViewControllerRepresentable {
+struct SignUpViewControllerRepresentable: UIViewControllerRepresentable {
     
 func updateUIViewController(_ uiView: UIViewController,context: Context) {
         // leave this empty
 }
     @available(iOS 13.0.0, *)
     func makeUIViewController(context: Context) -> UIViewController{
-        LoginViewController()
+        SignUpViewController()
     }
 
 }
 @available(iOS 13.0, *)
-struct LoginViewControllerRepresentable_PreviewProvider: PreviewProvider {
+struct SignUpViewControllerRepresentable_PreviewProvider: PreviewProvider {
     static var previews: some View {
         Group {
-            LoginViewControllerRepresentable()
+            SignUpViewControllerRepresentable()
                 .ignoresSafeArea()
                 .previewDisplayName("Preview")
                 .previewDevice(PreviewDevice(rawValue: "iPhone 11"))
@@ -178,5 +214,4 @@ struct LoginViewControllerRepresentable_PreviewProvider: PreviewProvider {
         
     }
 } #endif
-
 

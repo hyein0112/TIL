@@ -105,22 +105,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czQ-lE-fFy">
+                                <rect key="frame" x="327" y="204" width="57" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="UPDATE"/>
+                                <connections>
+                                    <action selector="textUpdate:" destination="Arm-cc-iVE" eventType="touchUpInside" id="7uT-4b-4LB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="73I-te-tz0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="73I-te-tz0" firstAttribute="trailing" secondItem="PTN-fd-Bud" secondAttribute="trailing" constant="30" id="3lN-2M-cNJ"/>
+                            <constraint firstItem="czQ-lE-fFy" firstAttribute="top" secondItem="PTN-fd-Bud" secondAttribute="bottom" constant="30" id="Qky-LK-0b7"/>
                             <constraint firstItem="PTN-fd-Bud" firstAttribute="top" secondItem="73I-te-tz0" secondAttribute="top" constant="30" id="pbM-Tn-QED"/>
                             <constraint firstItem="PTN-fd-Bud" firstAttribute="leading" secondItem="73I-te-tz0" secondAttribute="leading" constant="30" id="vZp-YK-Fc6"/>
+                            <constraint firstItem="73I-te-tz0" firstAttribute="trailing" secondItem="czQ-lE-fFy" secondAttribute="trailing" constant="30" id="xFs-Pt-3Ax"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="lable" destination="PTN-fd-Bud" id="e6H-om-kg1"/>
+                        <outlet property="updateButton" destination="czQ-lE-fFy" id="anT-R4-lUx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0wZ-uR-PPi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1668.1159420289857" y="93.75"/>
+            <point key="canvasLocation" x="1786" y="80"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qXe-Dy-9Vk">
