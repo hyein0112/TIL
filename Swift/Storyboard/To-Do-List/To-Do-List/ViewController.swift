@@ -69,7 +69,7 @@ extension ViewController : UITableViewDelegate{
         vc.delegate = self
         vc.title = "New Task"
         vc.index = indexPath
-        vc.task = tasks[indexPath.row]
+        vc.task = tasks
         navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -15,13 +15,13 @@ class TaskViewController: UIViewController {
     @IBOutlet var lable: UITextField!
     @IBOutlet weak var updateButton: UIButton!
     
-    var task: String?
+    var task: [String]?
     var index : IndexPath?
     weak var delegate: didfinishDelete?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        lable.text = task
+        lable.text = task![index!.row]
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Delete", style: .done, target: self, action: #selector(deleteTask))
     }
    
@@ -39,7 +39,9 @@ class TaskViewController: UIViewController {
 
 
     @IBAction func textUpdate(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        guard let index = index?.row else { return  }
+        UserDefaults().setValue(lable.text, forKey: "task_\(index + 1)")
+        self.delegate?.reload()
     }
     
 }
