@@ -58,6 +58,7 @@ class LoginViewController: UIViewController {
         $0.setTitle("비밀번호를 잊으셨나요?", for: .normal)
         $0.setTitleColor(UIColor(red: 130 / 255, green: 134 / 255, blue: 150 / 255, alpha : 1), for: .normal)
         $0.titleLabel?.font = .boldSystemFont(ofSize: 15)
+        $0.addTarget(self, action: #selector(tabForgotPw), for: .touchUpInside)
     }
     var notSignedUpButton = UIButton().then {
         $0.setTitle("아직 회원이 아니신가요?", for: .normal)
@@ -133,12 +134,12 @@ class LoginViewController: UIViewController {
             make.top.equalTo(pwField.snp.bottom).offset(43)
         }
         forgotPwButton.snp.makeConstraints { (make) in
-            make.width.height.equalToSuperview()
+            make.width.equalTo(self.forgotPwButton)
             make.centerX.equalToSuperview()
             make.centerY.equalTo(backgroundView.snp.bottom).inset(40)
         }
         notSignedUpButton.snp.makeConstraints { (make) in
-            make.width.height.equalToSuperview()
+            make.width.equalTo(self.notSignedUpButton)
             make.centerX.equalToSuperview()
             make.centerY.equalTo(self.view.snp.bottom).inset(70)
         }
@@ -146,6 +147,10 @@ class LoginViewController: UIViewController {
     
     @objc func tabNotSignUp() {
         let controller = SignUpViewController()
+            navigationController?.pushViewController(controller, animated: true)
+    }
+    @objc func tabForgotPw() {
+        let controller = pwResetViewController()
             navigationController?.pushViewController(controller, animated: true)
     }
 }

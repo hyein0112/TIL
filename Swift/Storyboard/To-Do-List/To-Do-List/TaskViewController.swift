@@ -40,8 +40,9 @@ class TaskViewController: UIViewController {
 
     @IBAction func textUpdate(_ sender: Any) {
         guard let index = index?.row else { return  }
-        UserDefaults().setValue(lable.text, forKey: "task_\(index + 1)")
-        self.delegate?.reload()
+                UserDefaults().setValue(lable.text, forKey: "task_\(index + 1)")
+                self.delegate?.reload()
+            
     }
     
 }
