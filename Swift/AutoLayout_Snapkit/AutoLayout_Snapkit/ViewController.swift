@@ -36,40 +36,41 @@ class ViewController: UIViewController {
         indigoView.backgroundColor = .systemIndigo
         purpleView.backgroundColor = .purple
         
+        //SnapKit
         redView.snp.makeConstraints { make in
             make.top.equalTo(view.snp.top)
-            make.size.equalTo(CGSize(width: 100, height: 100))
-            make.left.equalTo(view.snp.left)
+            make.width.height.equalTo(100)
+            make.left.equalTo(view)
         }
         orangeView.snp.makeConstraints { make in
             make.top.equalTo(redView.snp.bottom)
-            make.size.equalTo(CGSize(width: 100, height: 100))
-            make.left.equalTo(redView.snp.left)
+            make.width.height.equalTo(100)
+            make.left.equalTo(redView)
         }
         yellowView.snp.makeConstraints { make in
             make.top.equalTo(orangeView.snp.bottom)
-            make.size.equalTo(CGSize(width: 100, height: 100))
-            make.left.equalTo(orangeView.snp.left)
+            make.width.height.equalTo(100)
+            make.left.equalTo(orangeView)
         }
         greenView.snp.makeConstraints { make in
             make.top.equalTo(yellowView.snp.top)
-            make.size.equalTo(CGSize(width: 100, height: 100))
-            make.left.equalTo(yellowView.snp.right)
+            make.width.height.equalTo(100)
+            make.left.equalTo(yellowView)
         }
         blueView.snp.makeConstraints { make in
             make.top.equalTo(greenView.snp.top)
-            make.size.equalTo(CGSize(width: 100, height: 100))
+            make.width.height.equalTo(100)
             make.left.equalTo(greenView.snp.right)
         }
         indigoView.snp.makeConstraints { make in
             make.top.equalTo(blueView.snp.top)
-            make.size.equalTo(CGSize(width: 100, height: 100))
+            make.width.height.equalTo(100)
             make.left.equalTo(blueView.snp.right)
         }
  
         purpleView.snp.makeConstraints { make in
-            make.center.equalTo(view.snp.center)
-            make.size.equalTo(CGSize(width: 100, height: 100))
+            make.center.equalToSuperview()
+            make.width.height.equalTo(100)
         }
         
     }
