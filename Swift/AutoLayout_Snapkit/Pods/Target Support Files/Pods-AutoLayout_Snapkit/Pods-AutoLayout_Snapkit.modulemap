@@ -1,0 +1,6 @@
+framework module Pods_AutoLayout_Snapkit {
+  umbrella header "Pods-AutoLayout_Snapkit-umbrella.h"
+
+  export *
+  module * { export * }
+}
