@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
     var mainLabel = UILabel().then {
         $0.text = "ASSIGNMENT"
         $0.textColor = .white
-        $0.font = .systemFont(ofSize: 30)
+        $0.font = UIFont(name: "Apple SD Gothic Neo", size: 30)
     }
     var backgroundView = UIView().then {
         $0.backgroundColor = .white
@@ -26,44 +26,46 @@ class LoginViewController: UIViewController {
     }
     var titleLabel = UILabel().then {
         $0.text = "로그인"
-        $0.font = .systemFont(ofSize: 25)
-        $0.textColor = .darkGray
+        $0.font = UIFont(name: "Apple SD Gothic Neo", size: 25)
+        $0.textColor = UIColor(red: 118/255, green: 118/255, blue: 118/255, alpha: 1)
     }
     var idLabel = UILabel().then {
         $0.text = "아이디"
-        $0.textColor = .darkGray
+        $0.font = UIFont(name: "Apple SD Gothic Neo", size: 13)
+        $0.textColor = UIColor(red: 150/255, green: 150/255, blue: 150/255, alpha: 1)
     }
     var pwLabel = UILabel().then {
         $0.text = "비밀번호"
-        $0.textColor = .darkGray
+        $0.font = UIFont(name: "Apple SD Gothic Neo", size: 13)
+        $0.textColor = UIColor(red: 150/255, green: 150/255, blue: 150/255, alpha: 1)
     }
     var idField = UITextField().then {
         $0.placeholder = "id를 입력하세요"
-        $0.backgroundColor = UIColor(red: 236/255, green: 236/255, blue: 236/255, alpha: 1)
+        $0.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1)
         $0.layer.cornerRadius = 5
     }
     var pwField = UITextField().then {
         $0.placeholder = "pw를 입력하세요"
-        $0.backgroundColor = UIColor(red: 236/255, green: 236/255, blue: 236/255, alpha: 1)
+        $0.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1)
         $0.layer.cornerRadius = 5
     }
     var loginButton = UIButton().then {
         $0.setTitle("로그인", for: .normal)
-        $0.titleLabel?.font = .systemFont(ofSize: 16)
+        $0.titleLabel?.font = .systemFont(ofSize: 13)
         $0.backgroundColor = UIColor(red: 76 / 255, green: 96 / 255, blue: 144 / 255, alpha : 1)
         $0.setTitleColor(.white, for: .normal)
         $0.layer.cornerRadius = 10
     }
     var forgotPwButton = UIButton().then {
         $0.setTitle("비밀번호를 잊으셨나요?", for: .normal)
-        $0.setTitleColor(UIColor(red: 130 / 255, green: 134 / 255, blue: 150 / 255, alpha : 1), for: .normal)
-        $0.titleLabel?.font = .boldSystemFont(ofSize: 15)
+        $0.setTitleColor(UIColor(red: 51 / 255, green: 51 / 255, blue: 51 / 255, alpha : 1), for: .normal)
+        $0.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo", size: 13)
         $0.addTarget(self, action: #selector(tabForgotPw), for: .touchUpInside)
     }
     var notSignedUpButton = UIButton().then {
         $0.setTitle("아직 회원이 아니신가요?", for: .normal)
         $0.setTitleColor(.white, for: .normal)
-        $0.titleLabel?.font = .boldSystemFont(ofSize: 15)
+        $0.titleLabel?.font = .systemFont(ofSize: 13, weight: .semibold)
         $0.addTarget(self, action: #selector(tabNotSignUp), for: .touchUpInside)
     }
     override func viewDidLoad() {
@@ -90,53 +92,64 @@ class LoginViewController: UIViewController {
             make.center.equalToSuperview()
         }
         mainLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(self.view.frame.height/11.5)
+            make.width.equalToSuperview().dividedBy(2.21)
+            make.height.equalToSuperview().dividedBy(22.56)
+            make.top.equalToSuperview().offset(self.view.frame.height/14.25)
             make.centerX.equalToSuperview()
         }
         backgroundView.snp.makeConstraints { make in
-            make.width.equalToSuperview().dividedBy(1.12)
-            make.height.equalToSuperview().dividedBy(2)
-            make.top.equalTo(self.view.frame.height/5)
+            make.width.equalToSuperview().dividedBy(1.1)
+            make.height.equalToSuperview().dividedBy(1.96)
+            make.top.equalToSuperview().offset(self.view.frame.height/5.21)
             make.centerX.equalToSuperview()
         }
         titleLabel.snp.makeConstraints { make in
+            make.width.equalToSuperview().dividedBy(5.6)
+            make.height.equalToSuperview().dividedBy(26.19)
             make.centerX.equalToSuperview()
-            make.top.equalTo(backgroundView).offset(self.view.frame.height/25)
+            make.top.equalToSuperview().offset(self.view.frame.height/3.96)
         }
         idLabel.snp.makeConstraints { make in
-            make.left.equalTo(backgroundView).offset(self.view.frame.width/16)
-            make.top.equalTo(backgroundView).offset(self.view.frame.height/6.7)
+            make.width.equalToSuperview().dividedBy(11.02)
+            make.height.equalToSuperview().dividedBy(50.75)
+            make.left.equalToSuperview().offset(self.view.frame.width/10.14)
+            make.top.equalToSuperview().offset(self.view.frame.height/2.8)
         }
         pwLabel.snp.makeConstraints { make in
-            make.width.height.equalTo(self.idLabel)
+            make.width.equalToSuperview().dividedBy(7.21)
+            make.height.equalToSuperview().dividedBy(50.75)
             make.left.equalTo(idLabel)
-            make.top.equalTo(backgroundView).offset(self.view.frame.height/4.7)
+            make.top.equalToSuperview().offset(self.view.frame.height/2.38)
         }
         idField.snp.makeConstraints { make in
-            make.width.equalToSuperview().dividedBy(1.62)
-            make.height.equalTo(idLabel).offset(self.view.frame.height/50)
-            make.centerY.equalTo(idLabel)
-            make.left.equalTo(idLabel.snp.right).offset(self.view.frame.width/60)
+            make.width.equalToSuperview().dividedBy(1.5)
+            make.height.equalToSuperview().dividedBy(22.56)
+            make.top.equalToSuperview().offset(self.view.frame.height/2.91)
+            make.left.equalToSuperview().offset(self.view.frame.width/4.21)
         }
         pwField.snp.makeConstraints { make in
             make.width.equalTo(idField)
             make.height.equalTo(idField)
             make.left.equalTo(idField)
-            make.centerY.equalTo(pwLabel)
+            make.top.equalToSuperview().offset(self.view.frame.height/2.46)
         }
         loginButton.snp.makeConstraints { make in
-            make.width.equalToSuperview().dividedBy(1.44)
+            make.width.equalToSuperview().dividedBy(1.38)
             make.height.equalTo(idField)
             make.centerX.equalToSuperview()
-            make.top.equalTo(pwField.snp.bottom).offset(self.view.frame.height/20)
+            make.top.equalToSuperview().offset(self.view.frame.height/1.99)
         }
         forgotPwButton.snp.makeConstraints { make in
+            make.width.equalToSuperview().dividedBy(3.07)
+            make.height.equalToSuperview().dividedBy(50.75)
             make.centerX.equalToSuperview()
-            make.bottom.equalTo(backgroundView).inset(self.view.frame.height/19)
+            make.bottom.equalToSuperview().inset(self.view.frame.height/2.88)
         }
         notSignedUpButton.snp.makeConstraints { make in
+            make.width.equalToSuperview().dividedBy(2.98)
+            make.height.equalToSuperview().dividedBy(50.75)
             make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview().dividedBy(1.07)
+            make.bottom.equalToSuperview().inset(self.view.frame.height/12.12)
         }
     }
     
