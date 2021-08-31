@@ -85,63 +85,58 @@ class LoginViewController: UIViewController {
         self.view.addSubview(forgotPwButton)
         self.view.addSubview(notSignedUpButton)
         
-        imageView.snp.makeConstraints { (make) in
+        imageView.snp.makeConstraints { make in
             make.width.height.equalToSuperview()
             make.center.equalToSuperview()
         }
-        mainLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(60)
+        mainLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(self.view.frame.height/11.5)
             make.centerX.equalToSuperview()
         }
-        backgroundView.snp.makeConstraints { (make) in
-            make.width.equalTo(340)
-            make.height.equalTo(414)
-            make.top.equalTo(160)
+        backgroundView.snp.makeConstraints { make in
+            make.width.equalToSuperview().dividedBy(1.12)
+            make.height.equalToSuperview().dividedBy(2)
+            make.top.equalTo(self.view.frame.height/5)
             make.centerX.equalToSuperview()
         }
-        titleLabel.snp.makeConstraints { (make) in
-            make.width.equalTo(67)
-            make.height.equalTo(31)
+        titleLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.centerY.equalTo(backgroundView.snp.top).offset(50)
+            make.top.equalTo(backgroundView).offset(self.view.frame.height/25)
         }
-        idLabel.snp.makeConstraints { (make) in
+        idLabel.snp.makeConstraints { make in
+            make.left.equalTo(backgroundView).offset(self.view.frame.width/16)
+            make.top.equalTo(backgroundView).offset(self.view.frame.height/6.7)
+        }
+        pwLabel.snp.makeConstraints { make in
             make.width.height.equalTo(self.idLabel)
-            make.left.equalTo(backgroundView.snp.left).offset(20)
-            make.top.equalTo(backgroundView.snp.top).offset(134)
+            make.left.equalTo(idLabel)
+            make.top.equalTo(backgroundView).offset(self.view.frame.height/4.7)
         }
-        pwLabel.snp.makeConstraints { (make) in
-            make.width.height.equalTo(self.idLabel)
-            make.left.equalTo(backgroundView.snp.left).offset(20)
-            make.top.equalTo(backgroundView.snp.top).offset(185)
+        idField.snp.makeConstraints { make in
+            make.width.equalToSuperview().dividedBy(1.62)
+            make.height.equalTo(idLabel).offset(self.view.frame.height/50)
+            make.centerY.equalTo(idLabel)
+            make.left.equalTo(idLabel.snp.right).offset(self.view.frame.width/60)
         }
-        idField.snp.makeConstraints { (make) in
-            make.width.equalTo(240)
-            make.height.equalTo(36)
-            make.centerY.equalTo(idLabel.snp.centerY)
-            make.left.equalTo(idLabel.snp.right).offset(5)
+        pwField.snp.makeConstraints { make in
+            make.width.equalTo(idField)
+            make.height.equalTo(idField)
+            make.left.equalTo(idField)
+            make.centerY.equalTo(pwLabel)
         }
-        pwField.snp.makeConstraints { (make) in
-            make.width.equalTo(240)
-            make.height.equalTo(36)
-            make.left.equalTo(idField.snp.left)
-            make.centerY.equalTo(pwLabel.snp.centerY)
-        }
-        loginButton.snp.makeConstraints { (make) in
-            make.width.equalTo(272)
-            make.height.equalTo(36)
+        loginButton.snp.makeConstraints { make in
+            make.width.equalToSuperview().dividedBy(1.44)
+            make.height.equalTo(idField)
             make.centerX.equalToSuperview()
-            make.top.equalTo(pwField.snp.bottom).offset(43)
+            make.top.equalTo(pwField.snp.bottom).offset(self.view.frame.height/20)
         }
-        forgotPwButton.snp.makeConstraints { (make) in
-            make.width.equalTo(self.forgotPwButton)
+        forgotPwButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.centerY.equalTo(backgroundView.snp.bottom).inset(40)
+            make.bottom.equalTo(backgroundView).inset(self.view.frame.height/19)
         }
-        notSignedUpButton.snp.makeConstraints { (make) in
-            make.width.equalTo(self.notSignedUpButton)
+        notSignedUpButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.centerY.equalTo(self.view.snp.bottom).inset(70)
+            make.bottom.equalToSuperview().dividedBy(1.07)
         }
     }
     
