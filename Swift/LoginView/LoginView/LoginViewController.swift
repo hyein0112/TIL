@@ -110,7 +110,7 @@ class LoginViewController: UIViewController {
             make.top.equalToSuperview().offset(self.view.frame.height/3.96)
         }
         idLabel.snp.makeConstraints { make in
-            make.width.equalToSuperview().dividedBy(11.02)
+            make.width.equalToSuperview().dividedBy(11.03)
             make.height.equalToSuperview().dividedBy(50.75)
             make.left.equalToSuperview().offset(self.view.frame.width/10.14)
             make.top.equalToSuperview().offset(self.view.frame.height/2.8)
