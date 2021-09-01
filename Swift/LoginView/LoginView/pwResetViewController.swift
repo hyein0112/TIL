@@ -7,6 +7,9 @@
 
 import UIKit
 
+import SnapKit
+import Then
+
 class pwResetViewController: UIViewController {
 
     var imageView = UIImageView().then {
