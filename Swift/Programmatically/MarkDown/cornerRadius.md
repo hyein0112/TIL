@@ -4,7 +4,6 @@
 
 `UIView` 생성 후 진행한다.
 
----   
 
 ## cornerRadius란?
 먼저 cornerRadius가 무엇인지 알아보자!   
@@ -19,7 +18,6 @@
 이렇게!   
 특정 View의 원하는 모서리에 round 처리하는 것을 바로 `cornerRadius`라고한다.
 
----
 
 ## cornerRadius 사용하기
 이제 한번 cornerRadius를 사용해보자.   
@@ -31,7 +29,6 @@ myView.layer.cornerRadius = 20
 요 코드를 추가해 보자!   
 그러면 뷰의 모서리가 20만큼 둥글게 변한 것을 볼 수 있다.   
 
----
 
 ## 원하는 부분만 둥글게 처리하기
 정말 쉽다!!   
