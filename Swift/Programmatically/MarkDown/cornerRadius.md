@@ -32,7 +32,8 @@ myView.layer.cornerRadius = 20
 
 ## 원하는 부분만 둥글게 처리하기
 정말 쉽다!!   
-View의 X, Y 좌표를 생각하며 내가 원하는 부분만 둥글게 하면 된다.
+View의 X, Y 좌표를 생각하며 내가 원하는 부분만 둥글게 하면 된다.   
+
 <img src= "./images/image3.png" width="350"> 
 
 예를들어 뷰의 윗부분만 둥글게 하고 싶다면   
@@ -45,11 +46,12 @@ myView.layer.cornerRadius = 20
 myView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
 ```
 이렇게 아까 쓴 코드에 한줄만 더 추가하게 되면   
+
 <img src= "./images/image4.png" width="200">   
 윗부분만 20만큼 둥글게 처리된 것을 볼 수 있다!!!
 
 
-
+[Reference](https://marlboroyw.tistory.com/567)
   
 
 
