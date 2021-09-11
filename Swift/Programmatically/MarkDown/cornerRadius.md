@@ -47,7 +47,8 @@ myView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
 ```
 이렇게 아까 쓴 코드에 한줄만 더 추가하게 되면   
 
-<img src= "./images/image4.png" width="200">   
+<img src= "./images/image4.png" width="200">    
+
 윗부분만 20만큼 둥글게 처리된 것을 볼 수 있다!!!
 
 
