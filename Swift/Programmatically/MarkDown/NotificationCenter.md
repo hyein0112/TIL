@@ -39,6 +39,6 @@ var userInfo: [AnyHashable : Any]? // Notification과 관련된 값 또는 객�
  ```   
 
 `addObserver`: 관찰자를 대기시킴  
-`selector`: 관찰자가 수행해야 할 업무 
+`selector`: 관찰자가 수행해야 할 업무  
 
-
+[Reference](https://silver-g-0114.tistory.com/106)
