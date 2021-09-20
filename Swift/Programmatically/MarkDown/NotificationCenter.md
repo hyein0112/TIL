@@ -25,7 +25,7 @@ var userInfo: [AnyHashable : Any]? // Notification과 관련된 값 또는 객�
 ```swift
  NotificationCenter.default.post(name: NSNotification.Name("TestNotification"), object: nil, userInfo: nil)​
  ```   
- `.post`는 `Name`의 해당자들에게 일을 수행하라고 싴니ㅏ.  
+ `.post`는 `Name`의 해당자들에게 일을 수행하라고 시킨다.  
 
 옵저버를 등록하는 법은 아래 코드와 같다.
 
