@@ -29,7 +29,9 @@ class ViewController: UIViewController {
     }
 
     @objc private func didTapFilter() {
-        
+        let vc = FilterViewController()
+        let navVC = UINavigationController(rootViewController: vc)
+        present(navVC, animated: true)
     }
 }
 
