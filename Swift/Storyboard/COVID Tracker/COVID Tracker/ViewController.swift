@@ -16,6 +16,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         title = "Covid Cases"
         createFilterButton()
+        fatchData()
+    }
+    
+    private func fatchData() {
+        APICaller.shared.getCovidData(for: scope) {result in
+            switch result{
+            case .success(let data):
+                break
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     private func createFilterButton() {
@@ -30,6 +42,11 @@ class ViewController: UIViewController {
 
     @objc private func didTapFilter() {
         let vc = FilterViewController()
+        vc.completion = { [weak self] state in
+            self?.scope = .state(state)
+            self?.fatchData()
+            self?.createFilterButton()
+        }
         let navVC = UINavigationController(rootViewController: vc)
         present(navVC, animated: true)
     }
