@@ -7,6 +7,16 @@
 
 import Foundation
 
+extension DateFormatter {
+    static let dayFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        formatter.timeZone = .current
+        formatter.locale = .current
+        return formatter
+    }()
+}
+
 class APICaller {
     static let shared = APICaller()
     
@@ -37,7 +47,16 @@ class APICaller {
             
             do{
                 let result = try JSONDecoder().decode(CovidDataResponse.self, from: data)
-                print(result.data.count)
+                
+                let models: [DayData] = result.data.compactMap {
+                    guard let value = $0.cases.total.value,
+                          let date = DateFormatter.dayFormatter.date(from: $0.date) else {
+                        return nil
+                    }
+                    return DayData(
+                        date: date, count: value
+                    )
+                }
             }
             catch {
                 completion(.failure(error))
@@ -92,7 +111,7 @@ struct CovidCases: Codable {
 }
 
 struct TotalCases: Codable {
-    let value: Int
+    let value: Int?
 }
 
 struct DayData {
