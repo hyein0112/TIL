@@ -17,9 +17,9 @@ class ViewController: UIViewController, UITableViewDataSource {
     }()
     
     private var dayData: [DayData] = [] {
-        didset{
+        didSet{
             DispatchQueue.main.async {
-                tableView.reloadData()
+                self.tableView.reloadData()
             }
         }
     }
@@ -40,10 +40,10 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     private func fatchData() {
-        APICaller.shared.getCovidData(for: scope) {result in
+        APICaller.shared.getCovidData(for: scope) { [weak self] result in
             switch result{
             case .success(let dayData):
-                self.dayData = dayData
+                self?.dayData = dayData
             case .failure(let error):
                 print(error)
             }
@@ -82,7 +82,9 @@ class ViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     private func createText(with data: DayData) -> String? {
+        let dateString = DateFormatter.prettyFormatter.string(from: data.date)
         
+        return "\(dateString): \(data.count)"
     }
 }
 

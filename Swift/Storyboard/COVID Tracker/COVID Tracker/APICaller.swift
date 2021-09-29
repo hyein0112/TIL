@@ -15,6 +15,13 @@ extension DateFormatter {
         formatter.locale = .current
         return formatter
     }()
+    static let prettyFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeZone = .current
+        formatter.locale = .current
+        return formatter
+        }()
 }
 
 class APICaller {
