@@ -7,31 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B8BEC37526FC6AB1003F1B3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BEC37426FC6AB1003F1B3A /* AppDelegate.swift */; };
-		B8BEC37726FC6AB1003F1B3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BEC37626FC6AB1003F1B3A /* SceneDelegate.swift */; };
-		B8BEC37926FC6AB1003F1B3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BEC37826FC6AB1003F1B3A /* ViewController.swift */; };
-		B8BEC37C26FC6AB1003F1B3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8BEC37A26FC6AB1003F1B3A /* Main.storyboard */; };
-		B8BEC37E26FC6AB3003F1B3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8BEC37D26FC6AB3003F1B3A /* Assets.xcassets */; };
-		B8BEC38126FC6AB3003F1B3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8BEC37F26FC6AB3003F1B3A /* LaunchScreen.storyboard */; };
-		B8BEC38926FC6E4B003F1B3A /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BEC38826FC6E4B003F1B3A /* FilterViewController.swift */; };
-		B8BEC38B26FC712B003F1B3A /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BEC38A26FC712B003F1B3A /* APICaller.swift */; };
+		B8B8C63D2705B443002F553A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8C63C2705B443002F553A /* AppDelegate.swift */; };
+		B8B8C63F2705B443002F553A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8C63E2705B443002F553A /* SceneDelegate.swift */; };
+		B8B8C6412705B443002F553A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8C6402705B443002F553A /* ViewController.swift */; };
+		B8B8C6442705B443002F553A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8B8C6422705B443002F553A /* Main.storyboard */; };
+		B8B8C6462705B44E002F553A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8B8C6452705B44E002F553A /* Assets.xcassets */; };
+		B8B8C6492705B44E002F553A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8B8C6472705B44E002F553A /* LaunchScreen.storyboard */; };
+		B8B8C6512705B6B6002F553A /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8C6502705B6B6002F553A /* CollectionTableViewCell.swift */; };
+		B8B8C6532705B9E4002F553A /* TileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8C6522705B9E4002F553A /* TileCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B8BEC37126FC6AB1003F1B3A /* COVID Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COVID Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B8BEC37426FC6AB1003F1B3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B8BEC37626FC6AB1003F1B3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B8BEC37826FC6AB1003F1B3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B8BEC37B26FC6AB1003F1B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B8BEC37D26FC6AB3003F1B3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B8BEC38026FC6AB3003F1B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B8BEC38226FC6AB3003F1B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B8BEC38826FC6E4B003F1B3A /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
-		B8BEC38A26FC712B003F1B3A /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		B8B8C6392705B443002F553A /* Carousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carousel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8B8C63C2705B443002F553A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B8B8C63E2705B443002F553A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B8B8C6402705B443002F553A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B8B8C6432705B443002F553A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B8B8C6452705B44E002F553A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B8B8C6482705B44E002F553A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B8B8C64A2705B44E002F553A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8B8C6502705B6B6002F553A /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		B8B8C6522705B9E4002F553A /* TileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B8BEC36E26FC6AB1003F1B3A /* Frameworks */ = {
+		B8B8C6362705B443002F553A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,73 +41,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B8BEC36826FC6AB1003F1B3A = {
+		B8B8C6302705B443002F553A = {
 			isa = PBXGroup;
 			children = (
-				B8BEC37326FC6AB1003F1B3A /* COVID Tracker */,
-				B8BEC37226FC6AB1003F1B3A /* Products */,
+				B8B8C63B2705B443002F553A /* Carousel */,
+				B8B8C63A2705B443002F553A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B8BEC37226FC6AB1003F1B3A /* Products */ = {
+		B8B8C63A2705B443002F553A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B8BEC37126FC6AB1003F1B3A /* COVID Tracker.app */,
+				B8B8C6392705B443002F553A /* Carousel.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B8BEC37326FC6AB1003F1B3A /* COVID Tracker */ = {
+		B8B8C63B2705B443002F553A /* Carousel */ = {
 			isa = PBXGroup;
 			children = (
-				B8BEC37626FC6AB1003F1B3A /* SceneDelegate.swift */,
-				B8BEC37426FC6AB1003F1B3A /* AppDelegate.swift */,
-				B8BEC38826FC6E4B003F1B3A /* FilterViewController.swift */,
-				B8BEC37826FC6AB1003F1B3A /* ViewController.swift */,
-				B8BEC38A26FC712B003F1B3A /* APICaller.swift */,
-				B8BEC37A26FC6AB1003F1B3A /* Main.storyboard */,
-				B8BEC37D26FC6AB3003F1B3A /* Assets.xcassets */,
-				B8BEC37F26FC6AB3003F1B3A /* LaunchScreen.storyboard */,
-				B8BEC38226FC6AB3003F1B3A /* Info.plist */,
+				B8B8C63C2705B443002F553A /* AppDelegate.swift */,
+				B8B8C63E2705B443002F553A /* SceneDelegate.swift */,
+				B8B8C6402705B443002F553A /* ViewController.swift */,
+				B8B8C6502705B6B6002F553A /* CollectionTableViewCell.swift */,
+				B8B8C6522705B9E4002F553A /* TileCollectionViewCell.swift */,
+				B8B8C6422705B443002F553A /* Main.storyboard */,
+				B8B8C6452705B44E002F553A /* Assets.xcassets */,
+				B8B8C6472705B44E002F553A /* LaunchScreen.storyboard */,
+				B8B8C64A2705B44E002F553A /* Info.plist */,
 			);
-			path = "COVID Tracker";
+			path = Carousel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B8BEC37026FC6AB1003F1B3A /* COVID Tracker */ = {
+		B8B8C6382705B443002F553A /* Carousel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B8BEC38526FC6AB3003F1B3A /* Build configuration list for PBXNativeTarget "COVID Tracker" */;
+			buildConfigurationList = B8B8C64D2705B44E002F553A /* Build configuration list for PBXNativeTarget "Carousel" */;
 			buildPhases = (
-				B8BEC36D26FC6AB1003F1B3A /* Sources */,
-				B8BEC36E26FC6AB1003F1B3A /* Frameworks */,
-				B8BEC36F26FC6AB1003F1B3A /* Resources */,
+				B8B8C6352705B443002F553A /* Sources */,
+				B8B8C6362705B443002F553A /* Frameworks */,
+				B8B8C6372705B443002F553A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "COVID Tracker";
-			productName = "COVID Tracker";
-			productReference = B8BEC37126FC6AB1003F1B3A /* COVID Tracker.app */;
+			name = Carousel;
+			productName = Carousel;
+			productReference = B8B8C6392705B443002F553A /* Carousel.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B8BEC36926FC6AB1003F1B3A /* Project object */ = {
+		B8B8C6312705B443002F553A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					B8BEC37026FC6AB1003F1B3A = {
+					B8B8C6382705B443002F553A = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
 			};
-			buildConfigurationList = B8BEC36C26FC6AB1003F1B3A /* Build configuration list for PBXProject "COVID Tracker" */;
+			buildConfigurationList = B8B8C6342705B443002F553A /* Build configuration list for PBXProject "Carousel" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,57 +115,57 @@
 				en,
 				Base,
 			);
-			mainGroup = B8BEC36826FC6AB1003F1B3A;
-			productRefGroup = B8BEC37226FC6AB1003F1B3A /* Products */;
+			mainGroup = B8B8C6302705B443002F553A;
+			productRefGroup = B8B8C63A2705B443002F553A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B8BEC37026FC6AB1003F1B3A /* COVID Tracker */,
+				B8B8C6382705B443002F553A /* Carousel */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B8BEC36F26FC6AB1003F1B3A /* Resources */ = {
+		B8B8C6372705B443002F553A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8BEC38126FC6AB3003F1B3A /* LaunchScreen.storyboard in Resources */,
-				B8BEC37E26FC6AB3003F1B3A /* Assets.xcassets in Resources */,
-				B8BEC37C26FC6AB1003F1B3A /* Main.storyboard in Resources */,
+				B8B8C6492705B44E002F553A /* LaunchScreen.storyboard in Resources */,
+				B8B8C6462705B44E002F553A /* Assets.xcassets in Resources */,
+				B8B8C6442705B443002F553A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B8BEC36D26FC6AB1003F1B3A /* Sources */ = {
+		B8B8C6352705B443002F553A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8BEC37926FC6AB1003F1B3A /* ViewController.swift in Sources */,
-				B8BEC37526FC6AB1003F1B3A /* AppDelegate.swift in Sources */,
-				B8BEC38926FC6E4B003F1B3A /* FilterViewController.swift in Sources */,
-				B8BEC38B26FC712B003F1B3A /* APICaller.swift in Sources */,
-				B8BEC37726FC6AB1003F1B3A /* SceneDelegate.swift in Sources */,
+				B8B8C6412705B443002F553A /* ViewController.swift in Sources */,
+				B8B8C6532705B9E4002F553A /* TileCollectionViewCell.swift in Sources */,
+				B8B8C63D2705B443002F553A /* AppDelegate.swift in Sources */,
+				B8B8C63F2705B443002F553A /* SceneDelegate.swift in Sources */,
+				B8B8C6512705B6B6002F553A /* CollectionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B8BEC37A26FC6AB1003F1B3A /* Main.storyboard */ = {
+		B8B8C6422705B443002F553A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B8BEC37B26FC6AB1003F1B3A /* Base */,
+				B8B8C6432705B443002F553A /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		B8BEC37F26FC6AB3003F1B3A /* LaunchScreen.storyboard */ = {
+		B8B8C6472705B44E002F553A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B8BEC38026FC6AB3003F1B3A /* Base */,
+				B8B8C6482705B44E002F553A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B8BEC38326FC6AB3003F1B3A /* Debug */ = {
+		B8B8C64B2705B44E002F553A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -234,7 +234,7 @@
 			};
 			name = Debug;
 		};
-		B8BEC38426FC6AB3003F1B3A /* Release */ = {
+		B8B8C64C2705B44E002F553A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -289,38 +289,38 @@
 			};
 			name = Release;
 		};
-		B8BEC38626FC6AB3003F1B3A /* Debug */ = {
+		B8B8C64E2705B44E002F553A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T7976S8FS6;
-				INFOPLIST_FILE = "COVID Tracker/Info.plist";
+				INFOPLIST_FILE = Carousel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hyein.COVID-Tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyein.Carousel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		B8BEC38726FC6AB3003F1B3A /* Release */ = {
+		B8B8C64F2705B44E002F553A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T7976S8FS6;
-				INFOPLIST_FILE = "COVID Tracker/Info.plist";
+				INFOPLIST_FILE = Carousel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hyein.COVID-Tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyein.Carousel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -330,25 +330,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B8BEC36C26FC6AB1003F1B3A /* Build configuration list for PBXProject "COVID Tracker" */ = {
+		B8B8C6342705B443002F553A /* Build configuration list for PBXProject "Carousel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B8BEC38326FC6AB3003F1B3A /* Debug */,
-				B8BEC38426FC6AB3003F1B3A /* Release */,
+				B8B8C64B2705B44E002F553A /* Debug */,
+				B8B8C64C2705B44E002F553A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B8BEC38526FC6AB3003F1B3A /* Build configuration list for PBXNativeTarget "COVID Tracker" */ = {
+		B8B8C64D2705B44E002F553A /* Build configuration list for PBXNativeTarget "Carousel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B8BEC38626FC6AB3003F1B3A /* Debug */,
-				B8BEC38726FC6AB3003F1B3A /* Release */,
+				B8B8C64E2705B44E002F553A /* Debug */,
+				B8B8C64F2705B44E002F553A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B8BEC36926FC6AB1003F1B3A /* Project object */;
+	rootObject = B8B8C6312705B443002F553A /* Project object */;
 }

@@ -10,6 +10,12 @@ import UIKit
 /// Data of covid cases
 class ViewController: UIViewController, UITableViewDataSource {
     
+    static let numberFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.locale = .current
+        return formatter
+    }()
+    
     private let tableView: UITableView = {
         let table = UITableView(frame: .zero)
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -67,9 +73,16 @@ class ViewController: UIViewController, UITableViewDataSource {
             self?.fatchData()
             self?.createFilterButton()
         }
+        
+        func viewDidLayoutSubviews() {
+            super.viewDidLayoutSubviews()
+            tableView.frame = view.bounds
+        }
+        
         let navVC = UINavigationController(rootViewController: vc)
         present(navVC, animated: true)
     }
+    
     //MARK: -Table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dayData.count
@@ -81,10 +94,11 @@ class ViewController: UIViewController, UITableViewDataSource {
         cell.textLabel?.text = createText(with: data)
         return cell
     }
+    
     private func createText(with data: DayData) -> String? {
         let dateString = DateFormatter.prettyFormatter.string(from: data.date)
-        
-        return "\(dateString): \(data.count)"
+        let total = Self.numberFormatter.string(from: NSNumber(value: data.count))
+        return "\(dateString): \(total)"
     }
 }
 
