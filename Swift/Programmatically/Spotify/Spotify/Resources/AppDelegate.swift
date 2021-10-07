@@ -29,6 +29,8 @@ var window: UIWindow?
         window.makeKeyAndVisible()
         self.window = window
         
+        print(AuthManager.shared.signInURL?.absoluteString)
+        
         return true
     }
 
