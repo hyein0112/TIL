@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     }
     
     lazy var line1 = UIView().then {
-        $0.backgroundColor = UIColor(red: 181, green: 181, blue: 181, alpha: 1)
+        $0.backgroundColor = UIColor(red: 0.708, green: 0.708, blue: 0.708, alpha: 1)
     }
     
     lazy var informationLabel = UILabel().then {
@@ -44,6 +44,13 @@ class ViewController: UIViewController {
         $0.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
     }
     
+    lazy var learnMoreButton = UIButton().then {
+        $0.setTitle("모두 보기", for: .normal)
+        $0.setTitleColor(UIColor(red: 0, green: 0.4, blue: 1, alpha: 1),
+                         for: .normal)
+        $0.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Light", size: 8)
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +68,7 @@ class ViewController: UIViewController {
         self.view.addSubview(profilePhoto)
         self.view.addSubview(suggestionLabel)
         self.view.addSubview(equipmentLabel)
+        self.view.addSubview(learnMoreButton)
     }
     
 //MARK: - location
@@ -96,6 +104,11 @@ class ViewController: UIViewController {
         equipmentLabel.snp.makeConstraints { make in
             make.left.equalTo(suggestionLabel)
             make.top.equalTo(suggestionLabel.snp.bottom).offset(self.view.frame.height/4.95)
+        }
+        
+        learnMoreButton.snp.makeConstraints { make in
+            make.left.equalTo(equipmentLabel.snp.right).offset(self.view.frame.width/2.01)
+            make.top.equalTo(suggestionLabel.snp.bottom).offset(self.view.frame.height/4.64)
         }
     }
 
