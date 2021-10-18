@@ -68,7 +68,14 @@ class CustomTableViewCell: UITableViewCell {
                 make.top.equalToSuperview()
                 make.left.equalToSuperview()
                 make.bottom.equalToSuperview()
-                make.
+                make.width.equalToSuperview()
+            }
+            
+            imgView.snp.makeConstraints { make in
+                make.width.equalToSuperview().dividedBy(3)
+                make.left.equalToSuperview().offset(16)
+                make.centerY.equalToSuperview()
+                make.height.equalToSuperview().dividedBy(2.8)
             }
         }
 
