@@ -11,46 +11,114 @@ import Then
 
 class ViewController: UIViewController {
     
-    lazy var forYouLabel = UILabel().then {
+    private let forYouLabel = UILabel().then {
         $0.text = "For You"
         $0.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 28)
         $0.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
     }
     
-    lazy var profilePhoto = UIImageView().then{
+    private let profilePhoto = UIImageView().then{
         $0.image = UIImage(named: "img1.png")
     }
     
-    lazy var line1 = UIView().then {
-        $0.backgroundColor = UIColor(red: 0.708, green: 0.708, blue: 0.708, alpha: 1)
+    private let profileLine = UIView().then {
+        $0.backgroundColor = UIColor(red: 181/255, green: 181/255, blue: 181/255, alpha: 1)
     }
     
-    lazy var informationLabel = UILabel().then {
+    private let informationLabel = UILabel().then {
         $0.text = "최신 정보입니다, 몽키 님"
         $0.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
         $0.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
     }
     
-    lazy var suggestionLabel = UILabel().then {
+    private let deliveryView = UIView().then {
+        $0.backgroundColor = .white
+        $0.layer.cornerRadius = 16
+        
+        $0.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
+        $0.layer.shadowOpacity = 1
+        $0.layer.shadowRadius = 20
+        $0.layer.shadowOffset = CGSize(width: 0, height: -8)
+    }
+    
+    private let deliveryImgView = UIImageView().then {
+        $0.image = UIImage(named: "img2.png")
+    }
+    
+    private let deliveryLabel = UILabel().then {
+        $0.text = "주문하신 제품이 출고되었습니다."
+        $0.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        $0.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 12)
+    }
+    
+    private let deliveryInformationLabel = UILabel().then {
+        $0.text = "1 제품, 배송 Oct 18"
+        $0.textColor = UIColor(red: 181/255, green: 181/255, blue: 181/255, alpha: 1)
+
+        $0.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 8)
+    }
+    
+    private let deliveryLine = UIView().then {
+        $0.backgroundColor = UIColor(red: 0.708, green: 0.708, blue: 0.708, alpha: 1)
+    }
+    
+    private let deliveryButton = UIButton().then {
+        $0.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        $0.tintColor = UIColor(red: 181/255, green: 181/255, blue: 181/255, alpha: 1)
+    }
+    
+    private let deliveryStatus = UIView().then {
+        $0.backgroundColor = UIColor(red: 181/255, green: 181/255, blue: 181/255, alpha: 1)
+        $0.layer.cornerRadius = 4
+    }
+    
+    private let currentDeliveryStatus = UIView().then {
+        
+        $0.backgroundColor = UIColor(red: 79/255, green: 209/255, blue: 77/255, alpha: 1)
+        $0.layer.cornerRadius = 4
+    }
+    
+    private let processingLabel = UILabel().then {
+        $0.text = "처리 중"
+        $0.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        $0.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 6)
+    }
+    
+    private let releaseLabel = UILabel().then {
+        $0.text = "출고됨"
+        $0.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        $0.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 6)
+    }
+    
+    private let deliveryCompleteLabel = UILabel().then {
+        $0.text = "배송됨"
+        $0.textColor = UIColor(red: 181/255, green: 181/255, blue: 181/255, alpha: 1)
+        $0.font = UIFont(name: "AppleSDGothicNeo-SemiBold", size: 6)
+    }
+    
+    private let suggestionLabel = UILabel().then {
         $0.text = "고객님을 위한 제안"
         $0.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
 
         $0.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 14)
     }
     
-    lazy var equipmentLabel = UILabel().then {
+    private let line1 = UIView().then {
+        $0.backgroundColor = UIColor(red: 181/255, green: 181/255, blue: 181/255, alpha: 1)
+    }
+
+    private let equipmentLabel = UILabel().then {
         $0.text = "고객님의 기기"
         $0.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
         $0.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
     }
     
-    lazy var learnMoreButton = UIButton().then {
+    private let learnMoreButton = UIButton().then {
         $0.setTitle("모두 보기", for: .normal)
         $0.setTitleColor(UIColor(red: 0, green: 0.4, blue: 1, alpha: 1),
                          for: .normal)
         $0.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Light", size: 8)
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,24 +129,36 @@ class ViewController: UIViewController {
     }
     
 //MARK: - addView
-    func addView() {
+    private func addView() {
         self.view.addSubview(forYouLabel)
-        self.view.addSubview(line1)
+        self.view.addSubview(profileLine)
         self.view.addSubview(informationLabel)
         self.view.addSubview(profilePhoto)
+        self.view.addSubview(deliveryView)
+        self.view.addSubview(deliveryImgView)
+        self.view.addSubview(deliveryLabel)
+        self.view.addSubview(deliveryInformationLabel)
+        self.view.addSubview(deliveryLine)
+        self.view.addSubview(deliveryButton)
+        self.view.addSubview(deliveryStatus)
+        self.view.addSubview(currentDeliveryStatus)
+        self.view.addSubview(processingLabel)
+        self.view.addSubview(releaseLabel)
+        self.view.addSubview(deliveryCompleteLabel)
         self.view.addSubview(suggestionLabel)
+        self.view.addSubview(line1)
         self.view.addSubview(equipmentLabel)
         self.view.addSubview(learnMoreButton)
     }
     
 //MARK: - location
-    func location() {
+    private func location() {
         forYouLabel.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(self.view.frame.width/14.42)
             make.top.equalToSuperview().offset(self.view.frame.height/15.92)
         }
         
-        line1.snp.makeConstraints { make in
+        profileLine.snp.makeConstraints { make in
             make.width.equalToSuperview().dividedBy(1.16)
             make.height.equalTo(self.view.frame.height/812)
             make.centerX.equalToSuperview()
@@ -96,9 +176,80 @@ class ViewController: UIViewController {
             make.top.equalToSuperview().offset(self.view.frame.height/18.45)
         }
         
+        deliveryView.snp.makeConstraints { make in
+            make.width.equalToSuperview().dividedBy(1.22)
+            make.height.equalToSuperview().dividedBy(7.73)
+            make.centerX.equalToSuperview()
+            make.top.equalTo(informationLabel.snp.bottom).offset(self.view.frame.height/33.83)
+        }
+        
+        deliveryImgView.snp.makeConstraints { make in
+            make.width.equalToSuperview().dividedBy(15.66)
+            make.height.equalToSuperview().dividedBy(16.24)
+            make.top.equalTo(deliveryView).offset(self.view.frame.height/101.5)
+            make.left.equalTo(deliveryView).offset(self.view.frame.width/14.42)
+        }
+        
+        deliveryLabel.snp.makeConstraints { make in
+            make.top.equalTo(deliveryView).offset(self.view.frame.height/42.74)
+            make.left.equalTo(deliveryView).offset(self.view.frame.width/4.36)
+        }
+        
+        deliveryInformationLabel.snp.makeConstraints { make in
+            make.top.equalTo(deliveryLabel.snp.bottom).offset(self.view.frame.height/135.33)
+            make.left.equalTo(deliveryLabel)
+        }
+        
+        deliveryLine.snp.makeConstraints { make in
+            make.width.equalToSuperview().dividedBy(1.21)
+            make.height.equalToSuperview().dividedBy(812)
+            make.centerX.equalToSuperview()
+            make.top.equalTo(deliveryImgView.snp.bottom).offset(self.view.frame.height/73.82)
+        }
+        
+        deliveryButton.snp.makeConstraints { make in
+            make.width.equalToSuperview().dividedBy(51.3)
+            make.height.equalToSuperview().dividedBy(62.46)
+            make.top.equalTo(deliveryView).offset(self.view.frame.height/24.61)
+            make.right.equalTo(deliveryView).inset(self.view.frame.width/21.2)
+        }
+        
+        deliveryStatus.snp.makeConstraints { make in
+            make.width.equalToSuperview().dividedBy(1.42)
+            make.height.equalToSuperview().dividedBy(180)
+            make.top.equalTo(deliveryLine.snp.bottom).offset(self.view.frame.height/58)
+            make.centerX.equalToSuperview()
+        }
+        
+        currentDeliveryStatus.snp.makeConstraints { make in
+            make.height.equalTo(deliveryStatus)
+            make.width.equalToSuperview().dividedBy(2.84)
+            make.top.left.equalTo(deliveryStatus)
+        }
+        
+        processingLabel.snp.makeConstraints { make in
+            make.top.equalTo(deliveryStatus.snp.bottom).offset(self.view.frame.height/203)
+            make.left.equalTo(deliveryStatus)
+        }
+        
+        releaseLabel.snp.makeConstraints { make in
+            make.top.equalTo(processingLabel)
+            make.left.equalTo(processingLabel.snp.right).offset(self.view.frame.width/3.57)
+        }
+        
+        deliveryCompleteLabel.snp.makeConstraints { make in
+            make.top.equalTo(releaseLabel)
+            make.left.equalTo(releaseLabel.snp.right).offset(self.view.frame.width/3.41)
+        }
+        
         suggestionLabel.snp.makeConstraints { make in
             make.left.equalTo(informationLabel)
             make.top.equalTo(informationLabel.snp.bottom).offset(self.view.frame.height/4.75)
+        }
+        
+        line1.snp.makeConstraints { make in
+            make.width.height.centerX.equalTo(profileLine)
+            make.top.equalTo(suggestionLabel.snp.bottom).offset(self.view.frame.height/101.5)
         }
         
         equipmentLabel.snp.makeConstraints { make in

@@ -14,6 +14,7 @@
 		B8070510271B13780071289D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B807050E271B13780071289D /* Main.storyboard */; };
 		B8070512271B13790071289D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8070511271B13790071289D /* Assets.xcassets */; };
 		B8070515271B13790071289D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8070513271B13790071289D /* LaunchScreen.storyboard */; };
+		B89B3F7A271DBF9D0087A83D /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89B3F79271DBF9D0087A83D /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		B8070511271B13790071289D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8070514271B13790071289D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8070516271B13790071289D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B89B3F79271DBF9D0087A83D /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		F9FFFE7F06996074E961742C /* Pods-JjapAppleStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JjapAppleStore.release.xcconfig"; path = "Target Support Files/Pods-JjapAppleStore/Pods-JjapAppleStore.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +50,6 @@
 				0B6E9FCA82C6095E28A400FB /* Pods-JjapAppleStore.debug.xcconfig */,
 				F9FFFE7F06996074E961742C /* Pods-JjapAppleStore.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +89,7 @@
 				B8070511271B13790071289D /* Assets.xcassets */,
 				B8070513271B13790071289D /* LaunchScreen.storyboard */,
 				B8070516271B13790071289D /* Info.plist */,
+				B89B3F79271DBF9D0087A83D /* CustomTableViewCell.swift */,
 			);
 			path = JjapAppleStore;
 			sourceTree = "<group>";
@@ -209,6 +211,7 @@
 			files = (
 				B807050D271B13780071289D /* ViewController.swift in Sources */,
 				B8070509271B13780071289D /* AppDelegate.swift in Sources */,
+				B89B3F7A271DBF9D0087A83D /* CustomTableViewCell.swift in Sources */,
 				B807050B271B13780071289D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
