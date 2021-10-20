@@ -77,6 +77,30 @@ class CustomTableViewCell: UITableViewCell {
                 make.centerY.equalToSuperview()
                 make.height.equalToSuperview().dividedBy(2.8)
             }
+            
+            titleLabel.snp.makeConstraints { make in
+                make.top.equalToSuperview().offset(18)
+                make.left.equalTo(imgView.snp.right).offset(35)
+            }
+            
+            subLabel.snp.makeConstraints { make in
+                make.top.equalTo(titleLabel.snp.bottom).offset(4)
+                make.left.equalTo(titleLabel)
+            }
+            
+            nextButton.snp.makeConstraints { make in
+                make.width.equalToSuperview().dividedBy(57.3)
+                make.height.equalToSuperview().dividedBy(5.6)
+                make.left.equalTo(subLabel.snp.right).offset(108)
+                make.centerY.equalToSuperview()
+            }
+            
+            line.snp.makeConstraints { make in
+                make.width.equalToSuperview()
+                make.height.equalToSuperview().dividedBy(1)
+                make.centerX.equalToSuperview()
+                make.bottom.equalToSuperview()
+            }
         }
 
     

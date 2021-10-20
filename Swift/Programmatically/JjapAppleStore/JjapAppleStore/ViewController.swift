@@ -9,8 +9,8 @@ import UIKit
 import SnapKit
 import Then
 
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
     private let forYouLabel = UILabel().then {
         $0.text = "For You"
         $0.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 28)
@@ -34,7 +34,6 @@ class ViewController: UIViewController {
     private let deliveryView = UIView().then {
         $0.backgroundColor = .white
         $0.layer.cornerRadius = 16
-        
         $0.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
         $0.layer.shadowOpacity = 1
         $0.layer.shadowRadius = 20
@@ -119,11 +118,48 @@ class ViewController: UIViewController {
                          for: .normal)
         $0.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Light", size: 8)
     }
-
+    
+    private let tableView = UITableView().then {
+        $0.separatorStyle = .none
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! CustomTableViewCell
+        cell.imgView.image = imgList[indexPath.row]
+        cell.titleLabel.text = titleLabelList[indexPath.row]
+        cell.subLabel.text = subLabelList[indexPath.row]
+        cell.subLabel.numberOfLines = lineOfSubLabel[indexPath.row]
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return self.view.frame.height/14.5
+    }
+            
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0
+    }
+    
+    private let imgList: [UIImage] = [UIImage(named: "img3.png")!, UIImage(named: "img4.png")!]
+    
+    private let titleLabelList: [String] = ["머리에 위치한 나사를 조여보세요.", "코드를 작성하세요."]
+    
+    private let subLabelList: [String] = ["나사를 조이고 더 맑은 정신으로 과제를 해결해보세요.", "방식은 자유입니다. 기능 구현이 아닌 퍼블리싱을 완벽히 해내보세요.\n 웅냥 웅냥 웅냥냥"]
+    
+    private let lineOfSubLabel: [Int] = [1,2]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
+        tableView.dataSource = self
+        tableView.delegate = self
+                        
+        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
         addView()
         location()
     }
@@ -149,6 +185,7 @@ class ViewController: UIViewController {
         self.view.addSubview(line1)
         self.view.addSubview(equipmentLabel)
         self.view.addSubview(learnMoreButton)
+        self.view.addSubview(tableView)
     }
     
 //MARK: - location
@@ -260,6 +297,13 @@ class ViewController: UIViewController {
         learnMoreButton.snp.makeConstraints { make in
             make.left.equalTo(equipmentLabel.snp.right).offset(self.view.frame.width/2.01)
             make.top.equalTo(suggestionLabel.snp.bottom).offset(self.view.frame.height/4.64)
+        }
+        
+        tableView.snp.makeConstraints { make in
+            make.height.equalTo((self.view.frame.height/14.5)*2)
+            make.width.equalTo(self.view.frame.width/1.16)
+            make.centerX.equalToSuperview()
+            make.top.equalTo(line1)
         }
     }
 
