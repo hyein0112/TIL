@@ -11,7 +11,7 @@ import Then
 
 class CustomTableViewCell: UITableViewCell {
     
-    static let identifier = "CustomCell"
+    static let identifier = "\(CustomTableViewCell.self)"
 
     var cellView = UIView().then {
         $0.backgroundColor = .white
@@ -72,14 +72,14 @@ class CustomTableViewCell: UITableViewCell {
             }
             
             imgView.snp.makeConstraints { make in
-                make.width.equalToSuperview().dividedBy(3)
+                make.width.equalToSuperview().dividedBy(16.1)
                 make.left.equalToSuperview().offset(16)
                 make.centerY.equalToSuperview()
                 make.height.equalToSuperview().dividedBy(2.8)
             }
             
             titleLabel.snp.makeConstraints { make in
-                make.top.equalToSuperview().offset(18)
+                make.top.equalTo(imgView)
                 make.left.equalTo(imgView.snp.right).offset(35)
             }
             
@@ -91,13 +91,13 @@ class CustomTableViewCell: UITableViewCell {
             nextButton.snp.makeConstraints { make in
                 make.width.equalToSuperview().dividedBy(57.3)
                 make.height.equalToSuperview().dividedBy(5.6)
-                make.left.equalTo(subLabel.snp.right).offset(108)
+                make.right.equalToSuperview().inset(12)
                 make.centerY.equalToSuperview()
             }
             
             line.snp.makeConstraints { make in
                 make.width.equalToSuperview()
-                make.height.equalToSuperview().dividedBy(1)
+                make.height.equalToSuperview().dividedBy(56)
                 make.centerX.equalToSuperview()
                 make.bottom.equalToSuperview()
             }

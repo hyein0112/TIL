@@ -123,15 +123,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         $0.separatorStyle = .none
     }
     
+    private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! CustomTableViewCell
-        cell.imgView.image = imgList[indexPath.row]
-        cell.titleLabel.text = titleLabelList[indexPath.row]
-        cell.subLabel.text = subLabelList[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell") as! CustomTableViewCell
+        cell.imgView.image = UIImage(named: tableViewImgList[indexPath.row])
+        cell.titleLabel.text = tableViewTitleLabelList[indexPath.row]
+        cell.subLabel.text = tableViewSubLabelList[indexPath.row]
         cell.subLabel.numberOfLines = lineOfSubLabel[indexPath.row]
         
         return cell
@@ -145,25 +150,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 0
     }
     
-    private let imgList: [UIImage] = [UIImage(named: "img3.png")!, UIImage(named: "img4.png")!]
+    private let tableViewImgList: [String] = ["img3.png", "img4.png"]
     
-    private let titleLabelList: [String] = ["머리에 위치한 나사를 조여보세요.", "코드를 작성하세요."]
+    private let tableViewTitleLabelList: [String] = ["머리에 위치한 나사를 조여보세요.", "코드를 작성하세요."]
     
-    private let subLabelList: [String] = ["나사를 조이고 더 맑은 정신으로 과제를 해결해보세요.", "방식은 자유입니다. 기능 구현이 아닌 퍼블리싱을 완벽히 해내보세요.\n 웅냥 웅냥 웅냥냥"]
+    private let tableViewSubLabelList: [String] = ["나사를 조이고 더 맑은 정신으로 과제를 해결해보세요.", "방식은 자유입니다. 기능 구현이 아닌 퍼블리싱을 완벽히 해내보세요.\n웅냥 웅냥 웅냥냥"]
     
     private let lineOfSubLabel: [Int] = [1,2]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        tableView.dataSource = self
-        tableView.delegate = self
-                        
-        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
+        tableViewSetting()
         addView()
         location()
     }
     
+//MARK: - tableViewSetting
+    private func tableViewSetting() {
+        tableView.dataSource = self
+        tableView.delegate = self
+                        
+        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
+        tableView.isScrollEnabled = false
+    }
 //MARK: - addView
     private func addView() {
         self.view.addSubview(forYouLabel)
@@ -303,7 +313,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             make.height.equalTo((self.view.frame.height/14.5)*2)
             make.width.equalTo(self.view.frame.width/1.16)
             make.centerX.equalToSuperview()
-            make.top.equalTo(line1)
+            make.top.equalTo(line1.snp.bottom)
         }
     }
 
