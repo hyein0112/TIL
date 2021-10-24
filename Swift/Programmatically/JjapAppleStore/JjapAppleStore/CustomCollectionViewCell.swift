@@ -61,6 +61,24 @@ class CustomCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(shoppingButton)
         
         imgView.snp.makeConstraints { make in
+            make.width.equalToSuperview().dividedBy(2.34)
+            make.height.equalToSuperview().dividedBy(6.92)
+            
+        }
+        
+        titleLabel.snp.makeConstraints { make in
+            
+        }
+        
+        subLabel.snp.makeConstraints { make in
+            
+        }
+        
+        informationButton.snp.makeConstraints { make in
+            
+        }
+        
+        shoppingButton.snp.makeConstraints { make in
             
         }
     }
