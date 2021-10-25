@@ -1,6 +1,0 @@
-framework module Pods_JjapAppleStore {
-  umbrella header "Pods-JjapAppleStore-umbrella.h"
-
-  export *
-  module * { export * }
-}
