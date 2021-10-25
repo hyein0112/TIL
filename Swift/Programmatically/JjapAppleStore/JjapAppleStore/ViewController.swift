@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource{
 
     private let forYouLabel = UILabel().then {
         $0.text = "For You"
@@ -126,6 +126,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.backgroundColor = .clear
+        $0.collectionViewLayout = layout
+        $0.contentInset = UIEdgeInsets.init(top: 0, left: 17, bottom: 0, right: 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCollectionViewCell", for: indexPath) as! CustomCollectionViewCell
+        cell.imgView.image = UIImage(named: collectionViewImgList[indexPath.row])
+        cell.titleLabel.text = collectionViewTitleLabelList[indexPath.row]
+        cell.subLabel.text = collectionViewSubLabelList[indexPath.row]
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -150,6 +167,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 0
     }
     
+    private let collectionViewImgList: [String] = ["iPhone.png", "watch.png", "macBook.png", "iPad.png"]
+    
+    private let collectionViewTitleLabelList: [String] = ["몽키의 iPhone", "몽키의 Apple Watch", "몽키의 MacBook Pro", "몽키의 iPad"]
+    
+    private let collectionViewSubLabelList: [String] = ["iPhone 13 mini", "Apple Watch SE", "MacBook Pro 16″", "iPad Pro"]
+
+    
+    
     private let tableViewImgList: [String] = ["img3.png", "img4.png"]
     
     private let tableViewTitleLabelList: [String] = ["머리에 위치한 나사를 조여보세요.", "코드를 작성하세요."]
@@ -162,9 +187,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         view.backgroundColor = .white
         tableViewSetting()
+        collectionViewSetting()
         addView()
         location()
     }
+    
+//MARK: - collectionViewSetting
+    func collectionViewSetting() {
+        collectionView.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: CustomCollectionViewCell.identifier)
+        collectionView.dataSource = self
+        collectionView.delegate = self
+    }
+    
     
 //MARK: - tableViewSetting
     private func tableViewSetting() {
@@ -196,6 +230,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.view.addSubview(equipmentLabel)
         self.view.addSubview(learnMoreButton)
         self.view.addSubview(tableView)
+        self.view.addSubview(collectionView)
     }
     
 //MARK: - location
@@ -314,6 +349,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             make.width.equalTo(self.view.frame.width/1.16)
             make.centerX.equalToSuperview()
             make.top.equalTo(line1.snp.bottom)
+        }
+        
+        collectionView.snp.makeConstraints { make in
+            make.height.equalToSuperview().dividedBy(3.52)
+            make.width.equalTo((self.view.frame.width/2.34)*4)
+            make.left.equalToSuperview().offset(self.view.frame.width/3.5)
+            make.top.equalTo(equipmentLabel.snp.bottom).offset(self.view.frame.width/23.88)
         }
     }
 
