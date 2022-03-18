@@ -13,7 +13,7 @@ VStack{
 
 아래와 같이 세로로 `Text`가 쌓여진 모습을 볼 수 있다.   
 
-<img src = "./image/vstack.png" width = "250">   
+<img src = "./image/vstack.png" width = "400">   
 - VStack의 텍스트 크기가 다르면 중앙으로 정렬이된다.   
 
 ## HStack (Horizontal Stack)
@@ -28,7 +28,7 @@ HStack{
  ```  
 이번에는 `HStack`의 `BackgroundColor`를 노랗게 바꿔보았다.  
 
- <img src= "./image/hstack.png" width = "300">   
+ <img src= "./image/hstack.png" width = "500">   
 
 위 사진처럼 `Text`가 가로로 쌓인 것을 볼 수 있다.   
 또한 배경색이 딱 `Text`의 크기만큼 바뀐 것을 볼 수 있는데 각 `Stack`은 자식의 크기만큼 늘어난다.
@@ -79,4 +79,7 @@ ZStack{
 }
 .edgesIgnoringSafeArea(.all)
 ```     
-<img src= "./image/safeArea.png" height = 600>
+<img src= "./image/safeArea.png" height = 600>      
+
+
+[Reference](https://medium.com/harrythegreat/swiftui-%ED%8A%9C%ED%86%A0%EB%A6%AC%EC%96%BC-3%ED%8E%B8-%EC%8A%A4%ED%83%9D%EB%8B%A4%EB%A3%A8%EA%B8%B0-e385bff93aa9)  
