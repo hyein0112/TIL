@@ -16,7 +16,7 @@ VStack{
 
 아래와 같이 `Text`가 가려져 일부만 보인다.
 
-<img src= "./image/scrollView1.png" width = 300>    
+<img src= "./image/scrollView1.png" width = 300> 
 
 이때 ScrollView를 이용하게 되는 것이다.   
 
@@ -35,8 +35,7 @@ ScrollView{
 ```   
 만들어 두었던 `VStack`을 `ScrollView`로 감싸게 되면 각 `Text`가 스크롤 되어 1부터 100까지 나오는걸 확인할 수 있다.   
 
-<img src= "./image/scrollView2.png" width = 300>
-<img src= "./image/scrollView3.png" width = 300>   
+<img src= "./image/scrollView2.png" width = 300> <img src= "./image/scrollView3.png" width = 300>   
 
 하지만 화면 중앙을 스크롤 해야만 작동이 되는데, 이때 `frame`을 변경해 효율적이게 할 수 있다.
 
