@@ -1,4 +1,4 @@
-# CSS
+# CSS(Cascading Style Sheets)
 
 ## CSS란?
 CSS는 Cascading Style Sheets의 약자로 HTML 요소들이 각종 미디어에서 어떻게 보이는가를 정의하는 데 사용되는 스타일 시트 언어이다.   
